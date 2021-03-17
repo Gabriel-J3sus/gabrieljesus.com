@@ -5,7 +5,6 @@ export const light: DefaultTheme = {
     background: '#FFF',
     primary: '#21243D',
     secondary: '#00A8CC',
-
     recentPostsbackground: '#EDF7FA',
     tagBackground: '#142850',
     buttonBackground: '#FF6464',
