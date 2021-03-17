@@ -5,12 +5,15 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: ${props => props.theme.colors.background};
   }
-  
+
+  body {
+    background: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.primary};
+  }
+
   body, input, button, textarea {
     font: 400 1rem 'Heebo', sans-serif;
-    color: ${props => props.theme.colors.primary};
   }
 
   a {
