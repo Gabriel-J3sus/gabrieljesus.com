@@ -25,4 +25,16 @@ export default createGlobalStyle`
     border: none;
     cursor: pointer;
   }
+
+  html::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background-color: ${props => props.theme.colors.shadows};
+    border-radius: 10px;
+  }
+  html::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 `

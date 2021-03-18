@@ -6,11 +6,11 @@ declare module 'styled-components' {
       background: string
       primary: string
       secondary: string
-
       recentPostsbackground: string
       tagBackground: string
       buttonBackground: string
       line: string
+      shadows: string
     }
   }
 }

@@ -10,8 +10,9 @@ export const Container = styled.div`
   margin-bottom: 1rem;
   padding: 0.75rem 0.5rem 1.33rem 1.18rem;
 
-  background: #fff;
-  box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
+  background: ${props => props.theme.colors.background};
+
+  box-shadow: 0px 4px 10px ${props => props.theme.colors.shadows};
   border-radius: 4px;
 
   > h2 {
@@ -31,6 +32,13 @@ export const Container = styled.div`
     padding: 1.5rem 1.3rem 1.3rem 1.3rem;
 
     cursor: pointer;
+
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+      transform: translateY(-5px);
+    }
 
     > h2 {
       font-size: 1.6rem;

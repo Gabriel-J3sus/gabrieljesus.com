@@ -8,6 +8,8 @@ export const light: DefaultTheme = {
     recentPostsbackground: '#EDF7FA',
     tagBackground: '#142850',
     buttonBackground: '#FF6464',
-    line: '#E0E0E0'
+    line: '#E0E0E0',
+
+    shadows: 'rgba(0, 154, 255, 0.25)'
   }
 }

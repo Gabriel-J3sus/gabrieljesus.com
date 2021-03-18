@@ -9,7 +9,7 @@ import { light } from '../styles/themes/light'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={dark}>
       <Component {...pageProps} />
       <GlobalStyle />
     </ThemeProvider>
