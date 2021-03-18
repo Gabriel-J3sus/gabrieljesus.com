@@ -1,15 +1,14 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 
 import { Header } from '../components/Header'
+import { CreatorDescription } from '../components/CreatorDescription'
+import { ContactPostsContainer } from '../components/ContactPostsContainer'
+import { Post } from '../components/Post'
+import { Footer } from '../components/Footer'
 
-import {
-  Container,
-  CreatorDescriptionContainer,
-  PostsContainer
-} from '../styles/pages/contact'
+import { Container } from '../styles/pages/contact'
 
 const Contact: React.FC = () => {
   return (
@@ -20,35 +19,14 @@ const Contact: React.FC = () => {
 
       <Header />
 
-      <CreatorDescriptionContainer>
-        <img
-          src="https://github.com/Gabriel-J3sus.png"
-          alt="Gabriel Araújo de Jesus"
-        />
+      <CreatorDescription />
 
-        <div className="description">
-          <h1>Olá, Eu sou Gabriel, Um curioso</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
-            maiores vel aliquid minus cumque, voluptas saepe ipsam molestias.
-            Animi ad eveniet amet corrupti eaque inventore labore voluptatum
-            magnam quisquam sit.
-          </p>
+      <ContactPostsContainer>
+        <Post />
+        <Post />
+      </ContactPostsContainer>
 
-          <button>Baixar curriculo</button>
-        </div>
-      </CreatorDescriptionContainer>
-
-      <PostsContainer>
-        <div className="wrapper">
-          <span>
-            <h3>Posts Recentes</h3>
-            <Link href="#">
-              <p>Ver tudo</p>
-            </Link>
-          </span>
-        </div>
-      </PostsContainer>
+      <Footer />
     </Container>
   )
 }
