@@ -7,7 +7,8 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
+  html, body {
+    overflow-x: hidden;
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.primary};
   }
@@ -18,5 +19,10 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
   }
 `
