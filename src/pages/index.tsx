@@ -47,7 +47,6 @@ const Contact: React.FC = () => {
           <Work />
         </div>
       </div>
-
       <Footer />
     </Container>
   )
