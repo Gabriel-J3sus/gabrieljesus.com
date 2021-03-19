@@ -41,8 +41,11 @@ const Contact: React.FC = () => {
       <div className="ContactWorkContainer">
         <h3>Projetos em Destaque</h3>
 
-        <Work />
-        <Work />
+        <div className="worksContainer">
+          <Work />
+          <Work />
+          <Work />
+        </div>
       </div>
 
       <Footer />
