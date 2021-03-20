@@ -7,7 +7,8 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body {
+  body {
+    overflow-y: auto;
     overflow-x: hidden;
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.primary};
@@ -26,15 +27,15 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
-  html::-webkit-scrollbar {
+  body::-webkit-scrollbar {
     width: 0.5rem;
   }
 
-  html::-webkit-scrollbar-thumb {
+  body::-webkit-scrollbar-thumb {
     background-color: ${props => props.theme.colors.shadows};
     border-radius: 10px;
   }
-  html::-webkit-scrollbar-track {
+  body::-webkit-scrollbar-track {
     background-color: transparent;
   }
 `

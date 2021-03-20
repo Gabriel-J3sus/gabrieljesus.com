@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
         <title>Contato | Gabriel Araújo de Jesus</title>
       </Head>
 
-      <Header />
+      <Header page="contact" />
 
       <CreatorDescription />
 
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
         <div className="wrapper">
           <span>
             <h3>Posts Recentes</h3>
-            <Link href="#">
+            <Link href="blog">
               <p>Ver tudo</p>
             </Link>
           </span>

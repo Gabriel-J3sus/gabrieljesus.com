@@ -1,19 +1,92 @@
 /* eslint-disable no-use-before-define */
-import React from 'react'
-import { AiOutlineMenu } from 'react-icons/ai'
-
+import Link from 'next/link'
+import React, { useCallback, useContext, useRef } from 'react'
+import { ThemeContext } from 'styled-components'
 import { Container } from '../styles/components/header'
 
-export const Header: React.FC = () => {
+interface PageLocation {
+  page: 'blog' | 'contact' | 'work'
+}
+
+export const Header: React.FC<PageLocation> = ({ page }) => {
+  const theme = useContext(ThemeContext)
+  const isModalOpen = useRef({ value: false })
+
+  const blog =
+    page === 'blog'
+      ? { color: `${theme.colors.buttonBackground}` }
+      : { color: `${theme.colors.primary}` }
+
+  const contact =
+    page === 'contact'
+      ? { color: `${theme.colors.buttonBackground}` }
+      : { color: `${theme.colors.primary}` }
+
+  const work =
+    page === 'work'
+      ? { color: `${theme.colors.buttonBackground}` }
+      : { color: `${theme.colors.primary}` }
+
+  const handleOpenOrCloseModal = useCallback(() => {
+    isModalOpen.current.value = !isModalOpen.current.value
+    const modal = document.querySelector('.modal')
+
+    if (isModalOpen.current.value) {
+      document.body.style.overflowY = 'hidden'
+      modal.classList.add('on')
+    } else {
+      document.body.style.overflowY = 'auto'
+      modal.classList.remove('on')
+    }
+  }, [])
+
   return (
     <Container>
       <div className="options">
-        <p>Projetos</p>
-        <p>Blog</p>
-        <p>Contato</p>
+        <Link href="work">
+          <p style={work}>Projetos</p>
+        </Link>
+
+        <Link href="blog">
+          <p style={blog}>Blog</p>
+        </Link>
+
+        <Link href="/">
+          <p style={contact}>Contato</p>
+        </Link>
       </div>
       <div className="modal">
-        <AiOutlineMenu size={30} />
+        <div className="openAndCloseWrapper">
+          <button
+            type="button"
+            className="menu"
+            onClick={handleOpenOrCloseModal}
+          >
+            <div className="one"></div>
+            <div className="two"></div>
+            <div className="three"></div>
+          </button>
+        </div>
+
+        <nav>
+          <Link href="work">
+            <span>
+              <h3 style={work}>Projetos</h3>
+            </span>
+          </Link>
+
+          <Link href="blog">
+            <span>
+              <h3 style={blog}>Blog</h3>
+            </span>
+          </Link>
+
+          <Link href="/">
+            <span>
+              <h3 style={contact}>Contato</h3>
+            </span>
+          </Link>
+        </nav>
       </div>
     </Container>
   )

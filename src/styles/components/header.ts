@@ -20,8 +20,118 @@ export const Container = styled.header`
 
   > .modal {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    > .openAndCloseWrapper {
+      > .menu {
+        width: 40px;
+        height: 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background: none;
+        outline: none;
+
+        .one,
+        .two,
+        .three {
+          height: 0.3rem;
+          width: 2rem;
+          margin: 3px 0;
+          background: ${props => props.theme.colors.primary};
+
+          transition-duration: 0.3s;
+        }
+      }
+    }
+
+    > nav {
+      display: none;
+    }
+  }
+
+  > .modal.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: ${props => props.theme.colors.background};
+    > .openAndCloseWrapper {
+      width: 100%;
+      padding: 1.25rem 1.12rem 0 0;
+
+      display: flex;
+
+      justify-content: flex-end;
+
+      > .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: 0.2s;
+
+        > .one {
+          transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        > .two {
+          opacity: 0;
+        }
+
+        > .three {
+          transform: rotate(-45deg) translate(8px, -9px);
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    > nav {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      > span {
+        max-width: 40%;
+        width: 100%;
+        height: 4rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 2px solid transparent;
+        border-radius: 1rem;
+
+        transition: all 0.2s;
+
+        > h3 {
+          font-size: 2rem;
+        }
+
+        &:hover {
+          border: 2px solid ${props => props.theme.colors.buttonBackground};
+          border-radius: 1.8rem;
+        }
+      }
+      span:not(:first-child) {
+        margin-top: 1.5rem;
+      }
+    }
   }
 
   @media (min-width: 550px) {
