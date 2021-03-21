@@ -1,18 +1,16 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import { AppProps } from 'next/app'
-import { ThemeProvider } from 'styled-components'
 
+import { MyThemeProvider } from '../contexts/themeContext'
 import GlobalStyle from '../styles/global'
-import { dark } from '../styles/themes/dark'
-import { light } from '../styles/themes/light'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={dark}>
+    <MyThemeProvider>
       <Component {...pageProps} />
       <GlobalStyle />
-    </ThemeProvider>
+    </MyThemeProvider>
   )
 }
 

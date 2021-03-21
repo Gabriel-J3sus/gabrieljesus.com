@@ -11,6 +11,9 @@ export const Container = styled.div`
     width: 10.6rem;
     height: 10.6rem;
 
+    padding: 0.2rem;
+    border: 2px solid ${props => props.theme.colors.line};
+
     margin-left: 0;
 
     border-radius: 100%;

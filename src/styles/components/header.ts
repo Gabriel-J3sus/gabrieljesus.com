@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { BsMoon, BsSun } from 'react-icons/bs'
 
 export const Container = styled.header`
   position: absolute;
@@ -13,6 +14,27 @@ export const Container = styled.header`
   align-items: center;
 
   background: ${props => props.theme.colors.background};
+
+  > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 1rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    transition: 0.2s;
+
+    &:hover {
+      border: 2px solid ${props => props.theme.colors.shadows};
+    }
+  }
 
   > .options {
     display: none;
@@ -137,6 +159,10 @@ export const Container = styled.header`
   @media (min-width: 550px) {
     padding: 1.68rem 3.75rem;
 
+    > button {
+      margin-right: 0;
+    }
+
     > .options {
       display: flex;
       justify-content: center;
@@ -146,15 +172,17 @@ export const Container = styled.header`
         font-size: 1.25rem;
         font-weight: 500;
 
+        transition: 0.2s;
+
         cursor: pointer;
         transition: 0.2s;
       }
 
       p:hover {
-        color: ${props => props.theme.colors.buttonBackground};
-      }
+        color: ${props => props.theme.colors.buttonBackground} !important;
+      } //It gives preference even when the inline style being more powerfull
 
-      p:not(:first-child) {
+      p {
         margin-left: 2rem;
       }
     }
@@ -163,4 +191,23 @@ export const Container = styled.header`
       display: none;
     }
   }
+`
+
+const icon = css`
+  width: 1.8rem;
+  height: 1.8rem;
+  flex-shrink: 0;
+  fill: ${props => props.theme.colors.line};
+  /*
+  &:hover {
+    fill: ${props => props.theme.colors.buttonBackground};
+  } */
+`
+
+export const MoonIcon = styled(BsMoon)`
+  ${icon}
+`
+
+export const SunIcon = styled(BsSun)`
+  ${icon}
 `

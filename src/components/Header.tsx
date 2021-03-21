@@ -2,30 +2,33 @@
 import Link from 'next/link'
 import React, { useCallback, useContext, useRef } from 'react'
 import { ThemeContext } from 'styled-components'
-import { Container } from '../styles/components/header'
+
+import { MyThemeContext } from '../contexts/themeContext'
+import { Container, MoonIcon, SunIcon } from '../styles/components/header'
 
 interface PageLocation {
   page: 'blog' | 'contact' | 'work'
 }
 
 export const Header: React.FC<PageLocation> = ({ page }) => {
-  const theme = useContext(ThemeContext)
+  const { toggleTheme } = useContext(MyThemeContext)
+  const { title, colors } = useContext(ThemeContext)
   const isModalOpen = useRef({ value: false })
 
   const blog =
     page === 'blog'
-      ? { color: `${theme.colors.buttonBackground}` }
-      : { color: `${theme.colors.primary}` }
+      ? { color: `${colors.buttonBackground}` }
+      : { color: `${colors.primary}` }
 
   const contact =
     page === 'contact'
-      ? { color: `${theme.colors.buttonBackground}` }
-      : { color: `${theme.colors.primary}` }
+      ? { color: `${colors.buttonBackground}` }
+      : { color: `${colors.primary}` }
 
   const work =
     page === 'work'
-      ? { color: `${theme.colors.buttonBackground}` }
-      : { color: `${theme.colors.primary}` }
+      ? { color: `${colors.buttonBackground}` }
+      : { color: `${colors.primary}` }
 
   const handleOpenOrCloseModal = useCallback(() => {
     isModalOpen.current.value = !isModalOpen.current.value
@@ -42,6 +45,10 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
 
   return (
     <Container>
+      <button type="button" onClick={toggleTheme}>
+        {title === 'dark' ? <SunIcon /> : <MoonIcon />}
+      </button>
+
       <div className="options">
         <Link href="work">
           <p style={work}>Projetos</p>
