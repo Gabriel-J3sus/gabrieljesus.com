@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
 
   padding-bottom: 1rem;
+  padding-right: 0.5rem;
 
   border-bottom: 1px solid ${props => props.theme.colors.line};
   box-shadow: 1px -2px 10px ${props => props.theme.colors.shadows};
@@ -57,6 +58,11 @@ export const Container = styled.div`
     }
   }
 
+  &:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+  }
+
   @media (min-width: 440px) {
     flex-direction: row;
     padding-bottom: 0;
@@ -88,11 +94,6 @@ export const Container = styled.div`
       > span {
         margin: 1rem 0 2rem;
       }
-    }
-
-    &:hover {
-      opacity: 0.8;
-      transform: translateY(-2px);
     }
   }
 `

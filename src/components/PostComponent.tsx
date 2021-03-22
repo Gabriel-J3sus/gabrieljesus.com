@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 
-import { Container } from '../styles/components/post'
+import { Container } from '../styles/components/postComponent'
 
 export const Post: React.FC = () => {
   return (

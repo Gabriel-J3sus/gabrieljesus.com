@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 import { Header } from '../components/Header'
 import { CreatorDescription } from '../components/CreatorDescription'
-import { Post } from '../components/Post'
-import { Work } from '../components/Work'
+import { Post } from '../components/PostComponent'
+import { Work } from '../components/WorkComponent'
 import { Footer } from '../components/Footer'
 
 import { Container } from '../styles/pages/contact'

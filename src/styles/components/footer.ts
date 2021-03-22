@@ -12,6 +12,8 @@ export const Container = styled.footer`
   width: 100%;
   height: 11.3rem;
 
+  margin-top: 5.1rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,8 +21,12 @@ export const Container = styled.footer`
 
   background: ${props => props.theme.colors.background};
 
-  .iconContainer {
+  > .iconContainer {
     margin-bottom: 1.6rem;
+  }
+
+  > p {
+    text-align: center;
   }
 `
 

@@ -9,7 +9,7 @@ export default {
     secondary: '#00A8CC',
     recentPostsbackground: '#EDF7FA',
     tagBackground: '#142850',
-    buttonBackground: '#FF6464',
+    buttonBackground: '#EC6041',
     line: '#E0E0E0',
 
     shadows: 'rgba(0, 154, 255, 0.25)'

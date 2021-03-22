@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100vw;
-
+  position: relative;
   padding-top: 6.5rem;
 
   display: flex;
@@ -60,6 +60,7 @@ export const Container = styled.div`
 
   > .ContactWorkContainer {
     max-width: 855px;
+    min-height: 45vh;
     width: 100%;
     height: 100%;
     margin-top: 1rem;

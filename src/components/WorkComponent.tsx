@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 
-import { Container } from '../styles/components/work'
+import { Container } from '../styles/components/workComponent'
 
 export const Work: React.FC = () => {
   return (
