@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
       </div>
 
       <div className="ContactWorkContainer">
-        <h3>Projetos em Destaque</h3>
+        <h3>Projetos</h3>
 
         <div className="worksContainer">
           <Work />
