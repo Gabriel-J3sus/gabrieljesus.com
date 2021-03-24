@@ -1,29 +1,45 @@
 /* eslint-disable no-use-before-define */
-import React from 'react'
+import React, { ReactNode } from 'react'
+import { useRouter } from 'next/dist/client/router'
 
 import { Container } from '../styles/components/workComponent'
 
-export const Work: React.FC = () => {
+interface WorkProps {
+  slug: string
+  title: string
+  year: string
+  type: string
+}
+
+export const Work: React.FC<WorkProps> = ({
+  slug,
+  title,
+  year,
+  type,
+  children
+}) => {
+  const router = useRouter()
+
+  function handlenavigateToProjectPost() {
+    return router.push(`/work/${slug}`)
+  }
+
   return (
-    <Container>
+    <Container onClick={handlenavigateToProjectPost}>
       <img
         src="https://github.com/Gabriel-J3sus.png"
         alt="Gabriel Araújo de Jesus"
       />
 
       <div className="description">
-        <h2>Designing Dashboards</h2>
+        <h2>{title}</h2>
 
         <span className="typesAndData">
-          <p className="tag">2021</p>
-          <p>Dashboard</p>
+          <p className="tag">{year}</p>
+          <p>{type}</p>
         </span>
 
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
-        </p>
+        <p>{children}</p>
       </div>
     </Container>
   )

@@ -50,11 +50,11 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
       </button>
 
       <div className="options">
-        <Link href="work">
+        <Link href="/work">
           <p style={work}>Projetos</p>
         </Link>
 
-        <Link href="blog">
+        <Link href="/blog">
           <p style={blog}>Blog</p>
         </Link>
 
