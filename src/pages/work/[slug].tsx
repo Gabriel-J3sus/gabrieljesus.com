@@ -5,25 +5,17 @@ import Head from 'next/head'
 
 import { getAllPostIds, getPostData } from '../api/posts'
 
+import { PostData } from '../../types/PostsInterfaces'
+
 import { Container } from '../../styles/pages/project'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 
-interface PostDataProps {
-  postData: {
-    slug: string
-    title: string
-    year: string
-    type: string
-    contentHtml: string
-  }
-}
-
-const Project: React.FC<PostDataProps> = ({ postData }) => {
+const Project: React.FC<PostData> = ({ postData }) => {
   return (
     <Container>
       <Head>
-        <title>Work | {postData.slug}</title>
+        <title>Work | {postData.title}</title>
       </Head>
 
       <Header page="work" />

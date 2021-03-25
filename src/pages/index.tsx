@@ -6,6 +6,8 @@ import { GetStaticProps } from 'next'
 
 import { getSortedPostsData } from './api/posts'
 
+import { PostCardData } from '../types/PostsInterfaces'
+
 import { Header } from '../components/Header'
 import { CreatorDescription } from '../components/CreatorDescription'
 import { Post } from '../components/PostComponent'
@@ -14,18 +16,7 @@ import { Footer } from '../components/Footer'
 
 import { Container } from '../styles/pages/contact'
 
-interface PostsData {
-  allPostsData: Array<{
-    slug: string
-    title: string
-    date: string
-    year: string
-    type: string
-    description: string
-  }>
-}
-
-const Contact: React.FC<PostsData> = ({ allPostsData }) => {
+const Contact: React.FC<PostCardData> = ({ allPostsData }) => {
   return (
     <Container>
       <Head>

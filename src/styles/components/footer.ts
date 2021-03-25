@@ -1,10 +1,5 @@
 import styled, { css } from 'styled-components'
-import {
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillFacebook,
-  AiOutlineTwitter
-} from 'react-icons/ai'
+import { AiFillGithub, AiFillInstagram } from 'react-icons/ai'
 
 export const Container = styled.footer`
   position: block;
@@ -46,14 +41,6 @@ export const Github = styled(AiFillGithub)`
   margin-left: 0;
 `
 
-export const Facebook = styled(AiFillFacebook)`
-  ${icon}
-`
-
 export const Instagram = styled(AiFillInstagram)`
-  ${icon}
-`
-
-export const Twitter = styled(AiOutlineTwitter)`
   ${icon}
 `
