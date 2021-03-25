@@ -76,13 +76,13 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
         </div>
 
         <nav>
-          <Link href="work">
+          <Link href="/work">
             <span>
               <h3 style={work}>Projetos</h3>
             </span>
           </Link>
 
-          <Link href="blog">
+          <Link href="/blog">
             <span>
               <h3 style={blog}>Blog</h3>
             </span>

@@ -7,14 +7,16 @@ import {
 } from 'react-icons/ai'
 
 export const Container = styled.footer`
+  position: block;
   bottom: 0;
-
+  z-index: 5;
   width: 100%;
   height: 11.3rem;
 
-  margin-top: 5.1rem;
+  margin-top: 2rem;
 
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;

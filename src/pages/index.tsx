@@ -2,6 +2,9 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import { GetStaticProps } from 'next'
+
+import { getSortedPostsData } from './api/posts'
 
 import { Header } from '../components/Header'
 import { CreatorDescription } from '../components/CreatorDescription'
@@ -11,7 +14,18 @@ import { Footer } from '../components/Footer'
 
 import { Container } from '../styles/pages/contact'
 
-const Contact: React.FC = () => {
+interface PostsData {
+  allPostsData: Array<{
+    slug: string
+    title: string
+    date: string
+    year: string
+    type: string
+    description: string
+  }>
+}
+
+const Contact: React.FC<PostsData> = ({ allPostsData }) => {
   return (
     <Container>
       <Head>
@@ -42,14 +56,26 @@ const Contact: React.FC = () => {
         <h3>Projetos</h3>
 
         <div className="worksContainer">
-          <Work />
-          <Work />
-          <Work />
+          {allPostsData.map(({ slug, title, year, type, description }) => (
+            <Work key={slug} slug={slug} title={title} year={year} type={type}>
+              {description}
+            </Work>
+          ))}
         </div>
       </div>
       <Footer />
     </Container>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getSortedPostsData()
+
+  return {
+    props: {
+      allPostsData
+    }
+  }
 }
 
 export default Contact
