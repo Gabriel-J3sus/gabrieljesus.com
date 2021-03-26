@@ -1,23 +1,16 @@
 /* eslint-disable no-use-before-define */
-import React, { ReactNode } from 'react'
-import { useRouter } from 'next/dist/client/router'
-
-import { Container } from '../styles/components/workComponent'
+import React from 'react'
 import Link from 'next/link'
 
-interface WorkProps {
-  slug: string
-  title: string
-  year: string
-  type: string
-}
+import { DataProps } from '../types/PostsProps'
+import { Container } from '../styles/components/workComponent'
 
-export const Work: React.FC<WorkProps> = ({
+export const Work: React.FC<DataProps> = ({
   slug,
   title,
   year,
   type,
-  children
+  description
 }) => {
   return (
     <Link href={`/work/${slug}`}>
@@ -35,7 +28,7 @@ export const Work: React.FC<WorkProps> = ({
             <p>{type}</p>
           </span>
 
-          <p>{children}</p>
+          <p>{description}</p>
         </div>
       </Container>
     </Link>

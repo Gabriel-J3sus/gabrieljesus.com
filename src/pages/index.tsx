@@ -6,7 +6,7 @@ import { GetStaticProps } from 'next'
 
 import { getSortedPostsData } from './api/posts'
 
-import { PostCardData } from '../types/PostsInterfaces'
+import { PostCardData } from '../types/PostsProps'
 
 import { Header } from '../components/Header'
 import { CreatorDescription } from '../components/CreatorDescription'
@@ -48,9 +48,14 @@ const Contact: React.FC<PostCardData> = ({ allPostsData }) => {
 
         <div className="worksContainer">
           {allPostsData.map(({ slug, title, year, type, description }) => (
-            <Work key={slug} slug={slug} title={title} year={year} type={type}>
-              {description}
-            </Work>
+            <Work
+              key={slug}
+              slug={slug}
+              title={title}
+              year={year}
+              type={type}
+              description={description}
+            />
           ))}
         </div>
       </div>

@@ -5,7 +5,7 @@ import Head from 'next/head'
 
 import { getAllPostIds, getPostData } from '../api/posts'
 
-import { PostData } from '../../types/PostsInterfaces'
+import { PostData } from '../../types/PostsProps'
 
 import { Container } from '../../styles/pages/project'
 import { Header } from '../../components/Header'

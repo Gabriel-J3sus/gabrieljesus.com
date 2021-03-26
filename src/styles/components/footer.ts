@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components'
 import { AiFillGithub, AiFillInstagram } from 'react-icons/ai'
 
 export const Container = styled.footer`
-  position: block;
   bottom: 0;
-  z-index: 5;
-  width: 100%;
+  left: 0;
+  right: 0;
+
   height: 11.3rem;
 
   margin-top: 2rem;

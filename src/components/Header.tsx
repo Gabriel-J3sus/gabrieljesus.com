@@ -4,11 +4,9 @@ import React, { useCallback, useContext, useRef } from 'react'
 import { ThemeContext } from 'styled-components'
 
 import { MyThemeContext } from '../contexts/themeContext'
-import { Container, MoonIcon, SunIcon } from '../styles/components/header'
+import { PageLocation } from '../types/components/HeaderProps'
 
-interface PageLocation {
-  page: 'blog' | 'contact' | 'work'
-}
+import { Container, MoonIcon, SunIcon } from '../styles/components/header'
 
 export const Header: React.FC<PageLocation> = ({ page }) => {
   const { toggleTheme } = useContext(MyThemeContext)

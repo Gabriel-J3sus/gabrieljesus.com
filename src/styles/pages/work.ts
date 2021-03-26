@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
 
   padding-top: 6.5rem;
 
@@ -30,7 +29,6 @@ export const Container = styled.div`
     }
 
     > .worksContainer {
-      height: 100%;
       display: grid;
       grid-template-rows: auto;
       grid-template-columns: 1fr;

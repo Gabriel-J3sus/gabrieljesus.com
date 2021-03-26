@@ -198,10 +198,6 @@ const icon = css`
   height: 1.8rem;
   flex-shrink: 0;
   fill: ${props => props.theme.colors.line};
-  /*
-  &:hover {
-    fill: ${props => props.theme.colors.buttonBackground};
-  } */
 `
 
 export const MoonIcon = styled(BsMoon)`

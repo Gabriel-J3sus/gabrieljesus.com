@@ -1,14 +1,11 @@
 /* eslint-disable no-use-before-define */
 import React, { createContext, useCallback, useEffect, useState } from 'react'
-import { DefaultTheme, ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
+
+import { ThemeContextData } from '../types/contexts/ThemeProps'
 
 import dark from '../styles/themes/dark'
 import light from '../styles/themes/light'
-
-interface ThemeContextData {
-  theme: DefaultTheme
-  toggleTheme(): void
-}
 
 export const MyThemeContext = createContext({} as ThemeContextData)
 
