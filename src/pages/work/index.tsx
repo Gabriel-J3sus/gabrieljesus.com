@@ -23,7 +23,10 @@ const work: React.FC<PostCardData> = ({ allPostsData }) => {
       <Header page="work" />
 
       <div className="contentWrapper">
-        <h1>Projetos</h1>
+        <span>
+          <h1>Projetos</h1>
+          <h2>{allPostsData.length} Post</h2>
+        </span>
         <div className="worksContainer">
           {allPostsData.map(({ slug, title, year, type, description }) => (
             <Work

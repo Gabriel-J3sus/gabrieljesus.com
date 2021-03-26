@@ -9,11 +9,11 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  position: relative;
-
   > .contentWrapper {
     max-width: 855px;
     width: 100%;
+
+    min-height: 60vh;
 
     display: flex;
     flex-direction: column;
@@ -31,6 +31,7 @@ export const Container = styled.div`
     > .postsContainer {
       display: grid;
       grid-template-rows: auto;
+      grid-auto-rows: 1fr;
       grid-template-columns: 1fr;
       grid-gap: 2rem;
     }

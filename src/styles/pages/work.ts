@@ -9,30 +9,52 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  position: relative;
-
   > .contentWrapper {
     max-width: 855px;
     width: 100%;
+
+    min-height: 60vh;
 
     display: flex;
     flex-direction: column;
 
     padding: 0 1.5rem;
 
-    > h1 {
+    > span {
+      display: flex;
+      flex-direction: column;
       margin-bottom: 1rem;
 
-      font-size: 1.8rem;
-      font-weight: 700;
-      line-height: 3.75rem;
+      > h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 3rem;
+      }
+
+      > h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 3.75rem;
+        color: ${props => props.theme.colors.secondary};
+      }
     }
 
     > .worksContainer {
       display: grid;
       grid-template-rows: auto;
+      grid-auto-rows: 1fr;
       grid-template-columns: 1fr;
       grid-gap: 2rem;
+    }
+  }
+
+  @media (min-width: 350px) {
+    > .contentWrapper {
+      > span {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
   }
 `
