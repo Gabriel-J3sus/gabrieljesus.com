@@ -53,7 +53,7 @@ export const Container = styled.div`
 
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: auto;
         grid-gap: 1rem;
       }
     }
@@ -128,7 +128,7 @@ export const Container = styled.div`
         }
 
         > .postsContainer {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: auto;
           grid-template-rows: 1fr;
           grid-gap: 1.25rem;
         }

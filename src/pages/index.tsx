@@ -4,9 +4,11 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
 
+import { getSortedBlogPostsData } from './api/blogPosts'
 import { getSortedProjectsPostsData } from './api/projectsPosts'
 
-import { PostCardData } from '../types/PostsProps'
+import { ProjectPostsCardData } from '../types/ProjectsPostProps'
+import { BlogPostsCardData } from '../types/BlogPostsProps'
 
 import { Header } from '../components/Header'
 import { CreatorDescription } from '../components/CreatorDescription'
@@ -16,7 +18,10 @@ import { Footer } from '../components/Footer'
 
 import { Container } from '../styles/pages/contact'
 
-const Contact: React.FC<PostCardData> = ({ allProjectsPostsData }) => {
+const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
+  allBlogPostsData,
+  allProjectsPostsData
+}) => {
   return (
     <Container>
       <Head>
@@ -37,8 +42,18 @@ const Contact: React.FC<PostCardData> = ({ allProjectsPostsData }) => {
           </span>
 
           <div className="postsContainer">
-            <Post />
-            <Post />
+            {allBlogPostsData.map(
+              ({ slug, title, formatedDate, type, description }) => (
+                <Post
+                  key={slug}
+                  slug={slug}
+                  title={title}
+                  formatedDate={formatedDate}
+                  type={type}
+                  description={description}
+                />
+              )
+            )}
           </div>
         </div>
       </div>
@@ -72,10 +87,12 @@ const Contact: React.FC<PostCardData> = ({ allProjectsPostsData }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const allBlogPostsData = getSortedBlogPostsData()
   const allProjectsPostsData = getSortedProjectsPostsData()
 
   return {
     props: {
+      allBlogPostsData,
       allProjectsPostsData
     }
   }

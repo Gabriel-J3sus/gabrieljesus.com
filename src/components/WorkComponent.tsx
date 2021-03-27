@@ -2,10 +2,10 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { DataProps } from '../types/PostsProps'
+import { ProjectDataProps } from '../types/ProjectsPostProps'
 import { Container } from '../styles/components/workComponent'
 
-export const Work: React.FC<DataProps> = ({
+export const Work: React.FC<ProjectDataProps> = ({
   slug,
   title,
   year,

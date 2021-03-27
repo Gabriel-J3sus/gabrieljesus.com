@@ -1,14 +1,14 @@
-interface DataProps {
+export interface ProjectDataProps {
   slug: string
   title: string
-  date: string
+  date?: string
   year: string
   type: string
   description: string
 }
 
-export interface PostCardData {
-  allProjectsPostsData: [DataProps]
+export interface ProjectPostsCardData {
+  allProjectsPostsData: [ProjectDataProps]
 }
 
 export interface ProjectPostData {

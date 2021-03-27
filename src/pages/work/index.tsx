@@ -5,7 +5,7 @@ import { GetStaticProps } from 'next'
 
 import { getSortedProjectsPostsData } from '../api/projectsPosts'
 
-import { PostCardData } from '../../types/PostsProps'
+import { ProjectPostsCardData } from '../../types/ProjectsPostProps'
 
 import { Header } from '../../components/Header'
 import { Work } from '../../components/WorkComponent'
@@ -13,7 +13,7 @@ import { Footer } from '../../components/Footer'
 
 import { Container } from '../../styles/pages/work'
 
-const work: React.FC<PostCardData> = ({ allProjectsPostsData }) => {
+const work: React.FC<ProjectPostsCardData> = ({ allProjectsPostsData }) => {
   return (
     <Container>
       <Head>

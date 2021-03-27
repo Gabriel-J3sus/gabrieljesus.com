@@ -1,7 +1,7 @@
 ---
-  title: 'Teste'
+  title: 'Bloguinho'
   date: '03-01-2021'
-  year: '2021'
+  formatedDate: '03 Jan 2021'
   type: 'test'
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 ---
