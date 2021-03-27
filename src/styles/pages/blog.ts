@@ -20,6 +20,11 @@ export const Container = styled.div`
 
     padding: 0 1.5rem;
 
+    transform: translateY(35px);
+    opacity: 0;
+
+    animation: up 1s forwards;
+
     > span {
       display: flex;
       flex-direction: column;
@@ -45,6 +50,17 @@ export const Container = styled.div`
       grid-auto-rows: 1fr;
       grid-template-columns: 1fr;
       grid-gap: 2rem;
+    }
+  }
+
+  @keyframes up {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
