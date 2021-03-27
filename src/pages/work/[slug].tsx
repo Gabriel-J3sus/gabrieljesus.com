@@ -3,34 +3,34 @@ import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 
-import { getAllPostIds, getPostData } from '../api/posts'
+import { getAllProjectsPostIds, getProjectPostData } from '../api/projectsPosts'
 
-import { PostData } from '../../types/PostsProps'
+import { ProjectPostData } from '../../types/PostsProps'
 
 import { Container } from '../../styles/pages/project'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 
-const Project: React.FC<PostData> = ({ postData }) => {
+const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
   return (
     <Container>
       <Head>
-        <title>Work | {postData.title}</title>
+        <title>Work | {ProjectPostData.title}</title>
       </Head>
 
-      <Header page="work" />
+      <Header />
 
       <div className="contentWrapper">
-        <h1>{postData.title}</h1>
+        <h1>{ProjectPostData.title}</h1>
 
         <span className="typesAndData">
-          <p className="tag">{postData.year}</p>
-          <p>{postData.type}</p>
+          <p className="tag">{ProjectPostData.year}</p>
+          <p>{ProjectPostData.type}</p>
         </span>
 
         <div
           className="content"
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+          dangerouslySetInnerHTML={{ __html: ProjectPostData.contentHtml }}
         />
       </div>
 
@@ -40,7 +40,7 @@ const Project: React.FC<PostData> = ({ postData }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds()
+  const paths = getAllProjectsPostIds()
 
   return {
     paths,
@@ -49,11 +49,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getPostData(params.slug)
+  const ProjectPostData = await getProjectPostData(params.slug)
 
   return {
     props: {
-      postData
+      ProjectPostData
     }
   }
 }

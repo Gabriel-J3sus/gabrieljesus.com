@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
 
-import { getSortedPostsData } from './api/posts'
+import { getSortedProjectsPostsData } from './api/projectsPosts'
 
 import { PostCardData } from '../types/PostsProps'
 
@@ -16,7 +16,7 @@ import { Footer } from '../components/Footer'
 
 import { Container } from '../styles/pages/contact'
 
-const Contact: React.FC<PostCardData> = ({ allPostsData }) => {
+const Contact: React.FC<PostCardData> = ({ allProjectsPostsData }) => {
   return (
     <Container>
       <Head>
@@ -52,16 +52,18 @@ const Contact: React.FC<PostCardData> = ({ allPostsData }) => {
         </span>
 
         <div className="worksContainer">
-          {allPostsData.map(({ slug, title, year, type, description }) => (
-            <Work
-              key={slug}
-              slug={slug}
-              title={title}
-              year={year}
-              type={type}
-              description={description}
-            />
-          ))}
+          {allProjectsPostsData.map(
+            ({ slug, title, year, type, description }) => (
+              <Work
+                key={slug}
+                slug={slug}
+                title={title}
+                year={year}
+                type={type}
+                description={description}
+              />
+            )
+          )}
         </div>
       </div>
       <Footer />
@@ -70,11 +72,11 @@ const Contact: React.FC<PostCardData> = ({ allPostsData }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData()
+  const allProjectsPostsData = getSortedProjectsPostsData()
 
   return {
     props: {
-      allPostsData
+      allProjectsPostsData
     }
   }
 }

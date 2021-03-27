@@ -6,7 +6,8 @@ export const Container = styled.div`
   align-items: center;
 
   padding-bottom: 1rem;
-  padding-right: 0.5rem;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
 
   border-bottom: 1px solid ${props => props.theme.colors.line};
   box-shadow: 1px -2px 10px ${props => props.theme.colors.shadows};
@@ -66,6 +67,8 @@ export const Container = styled.div`
   @media (min-width: 440px) {
     flex-direction: row;
     padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0.5rem;
 
     > img {
       width: 15.3rem;

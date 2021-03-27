@@ -5,9 +5,9 @@ import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
 
-const postsDirectory = path.join(process.cwd(), 'src/_posts')
+const postsDirectory = path.join(process.cwd(), 'src/_projects')
 
-export const getSortedPostsData = () => {
+export const getSortedProjectsPostsData = () => {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map(fileName => {
@@ -24,12 +24,13 @@ export const getSortedPostsData = () => {
     // Combine the data with the id
     return {
       slug: id,
+      date: matterResult.data.date,
       ...matterResult.data
     }
   })
   // Sort posts by date
   return allPostsData.sort((a, b) => {
-    if (a < b) {
+    if (a.date < b.date) {
       return 1
     } else {
       return -1
@@ -37,7 +38,7 @@ export const getSortedPostsData = () => {
   })
 }
 
-export function getAllPostIds() {
+export function getAllProjectsPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
 
   return fileNames.map(fileName => {
@@ -49,7 +50,7 @@ export function getAllPostIds() {
   })
 }
 
-export async function getPostData(slug) {
+export async function getProjectPostData(slug: string | string[]) {
   const fullPath = path.join(postsDirectory, `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf-8')
 
