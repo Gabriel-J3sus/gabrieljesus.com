@@ -18,7 +18,10 @@ const blog: React.FC = () => {
       <Header page="blog" />
 
       <div className="contentWrapper">
-        <h1>Blog</h1>
+        <span>
+          <h1>Blog</h1>
+          <h2>0 Posts</h2>
+        </span>
         <div className="postsContainer">
           <Post />
           <Post />

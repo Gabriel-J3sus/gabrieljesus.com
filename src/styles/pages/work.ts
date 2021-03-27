@@ -13,7 +13,7 @@ export const Container = styled.div`
     max-width: 855px;
     width: 100%;
 
-    min-height: 60vh;
+    min-height: 54vh;
 
     display: flex;
     flex-direction: column;
@@ -34,8 +34,8 @@ export const Container = styled.div`
       > h2 {
         font-size: 1.2rem;
         font-weight: 400;
-        line-height: 3.75rem;
-        color: ${props => props.theme.colors.secondary};
+        line-height: 3rem;
+        color: #8695a4;
       }
     }
 

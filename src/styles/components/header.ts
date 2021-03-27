@@ -144,11 +144,6 @@ export const Container = styled.header`
         > h3 {
           font-size: 2rem;
         }
-
-        &:hover {
-          border: 2px solid ${props => props.theme.colors.buttonBackground};
-          border-radius: 1.8rem;
-        }
       }
       span:not(:first-child) {
         margin-top: 1.5rem;
@@ -171,8 +166,6 @@ export const Container = styled.header`
       > p {
         font-size: 1.25rem;
         font-weight: 500;
-
-        transition: 0.2s;
 
         cursor: pointer;
         transition: 0.2s;

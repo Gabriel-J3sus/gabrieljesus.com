@@ -12,6 +12,7 @@ export const Container = styled.div`
   box-shadow: 1px -2px 10px ${props => props.theme.colors.shadows};
 
   transition: 0.2s;
+  cursor: pointer;
 
   > img {
     width: 100%;

@@ -70,11 +70,23 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
 
-    > h3 {
-      font-size: 1.1rem;
-      font-weight: 400;
+    > span {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       margin-bottom: 2.5rem;
+
+      > h3 {
+        font-size: 1.1rem;
+        font-weight: 400;
+      }
+
+      > p {
+        display: none;
+      }
     }
 
     > .worksContainer {
@@ -129,11 +141,25 @@ export const Container = styled.div`
 
       align-items: flex-start;
 
-      > h3 {
-        font-size: 1.3rem;
-        font-weight: 400;
+      > span {
+        justify-content: space-between;
 
         margin-bottom: 2.5rem;
+
+        > h3 {
+          font-size: 1.3rem;
+          font-weight: 400;
+        }
+
+        > p {
+          display: block;
+          color: ${props => props.theme.colors.secondary};
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
 
       > .worksContainer {

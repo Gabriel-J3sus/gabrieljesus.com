@@ -44,7 +44,12 @@ const Contact: React.FC<PostCardData> = ({ allPostsData }) => {
       </div>
 
       <div className="ContactWorkContainer">
-        <h3>Projetos</h3>
+        <span>
+          <h3>Projetos</h3>
+          <Link href="work">
+            <p>Ver tudo</p>
+          </Link>
+        </span>
 
         <div className="worksContainer">
           {allPostsData.map(({ slug, title, year, type, description }) => (
