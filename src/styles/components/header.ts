@@ -1,5 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { BsMoon, BsSun } from 'react-icons/bs'
+import { icon } from '../variables'
 
 export const Container = styled.header`
   position: absolute;
@@ -186,17 +187,12 @@ export const Container = styled.header`
   }
 `
 
-const icon = css`
-  width: 1.8rem;
-  height: 1.8rem;
-  flex-shrink: 0;
+export const MoonIcon = styled(BsMoon)`
+  ${icon};
   fill: ${props => props.theme.colors.line};
 `
 
-export const MoonIcon = styled(BsMoon)`
-  ${icon}
-`
-
 export const SunIcon = styled(BsSun)`
-  ${icon}
+  ${icon};
+  fill: ${props => props.theme.colors.line};
 `

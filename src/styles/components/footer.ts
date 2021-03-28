@@ -1,5 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { AiFillGithub, AiFillInstagram } from 'react-icons/ai'
+import { icon } from '../variables'
 
 export const Container = styled.footer`
   width: 100%;
@@ -24,20 +25,13 @@ export const Container = styled.footer`
   }
 `
 
-const icon = css`
-  width: 1.8rem;
-  height: 1.8rem;
-  fill: ${props => props.theme.colors.primary};
-  flex-shrink: 0;
-
-  margin-left: 2.1rem;
-`
-
 export const Github = styled(AiFillGithub)`
   ${icon};
-  margin-left: 0;
+  fill: ${props => props.theme.colors.primary};
 `
 
 export const Instagram = styled(AiFillInstagram)`
-  ${icon}
+  ${icon};
+  margin-left: 2.1rem;
+  fill: ${props => props.theme.colors.primary};
 `

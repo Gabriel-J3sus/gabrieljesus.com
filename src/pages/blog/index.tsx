@@ -1,17 +1,18 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import Head from 'next/head'
+import { GetStaticProps } from 'next'
 
 import { getSortedBlogPostsData } from '../api/blogPosts'
 
 import { BlogPostsCardData } from '../../types/BlogPostsProps'
 
 import { Header } from '../../components/Header'
+import { PostsContainer } from '../../components/PostsContainer'
 import { Post } from '../../components/PostComponent'
 import { Footer } from '../../components/Footer'
 
 import { Container } from '../../styles/pages/blog'
-import { GetStaticProps } from 'next'
 
 const blog: React.FC<BlogPostsCardData> = ({ allBlogPostsData }) => {
   return (
@@ -22,26 +23,20 @@ const blog: React.FC<BlogPostsCardData> = ({ allBlogPostsData }) => {
 
       <Header page="blog" />
 
-      <div className="contentWrapper">
-        <span>
-          <h1>Blog</h1>
-          <h2>{allBlogPostsData.length} Posts</h2>
-        </span>
-        <div className="postsContainer">
-          {allBlogPostsData.map(
-            ({ slug, title, formatedDate, type, description }) => (
-              <Post
-                key={slug}
-                slug={slug}
-                title={title}
-                formatedDate={formatedDate}
-                type={type}
-                description={description}
-              />
-            )
-          )}
-        </div>
-      </div>
+      <PostsContainer title="Blog" postsLength={allBlogPostsData.length}>
+        {allBlogPostsData.map(
+          ({ slug, title, formatedDate, type, description }) => (
+            <Post
+              key={slug}
+              slug={slug}
+              title={title}
+              formatedDate={formatedDate}
+              type={type}
+              description={description}
+            />
+          )
+        )}
+      </PostsContainer>
 
       <Footer />
     </Container>

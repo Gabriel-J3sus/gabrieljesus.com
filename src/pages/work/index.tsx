@@ -8,6 +8,7 @@ import { getSortedProjectsPostsData } from '../api/projectsPosts'
 import { ProjectPostsCardData } from '../../types/ProjectsPostProps'
 
 import { Header } from '../../components/Header'
+import { PostsContainer } from '../../components/PostsContainer'
 import { Work } from '../../components/WorkComponent'
 import { Footer } from '../../components/Footer'
 
@@ -22,26 +23,23 @@ const work: React.FC<ProjectPostsCardData> = ({ allProjectsPostsData }) => {
 
       <Header page="work" />
 
-      <div className="contentWrapper">
-        <span>
-          <h1>Projetos</h1>
-          <h2>{allProjectsPostsData.length} Post</h2>
-        </span>
-        <div className="worksContainer">
-          {allProjectsPostsData.map(
-            ({ slug, title, year, type, description }) => (
-              <Work
-                key={slug}
-                slug={slug}
-                title={title}
-                year={year}
-                type={type}
-                description={description}
-              />
-            )
-          )}
-        </div>
-      </div>
+      <PostsContainer
+        title="Projetos"
+        postsLength={allProjectsPostsData.length}
+      >
+        {allProjectsPostsData.map(
+          ({ slug, title, year, type, description }) => (
+            <Work
+              key={slug}
+              slug={slug}
+              title={title}
+              year={year}
+              type={type}
+              description={description}
+            />
+          )
+        )}
+      </PostsContainer>
 
       <Footer />
     </Container>
