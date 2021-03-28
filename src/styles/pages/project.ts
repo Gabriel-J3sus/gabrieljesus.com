@@ -1,16 +1,8 @@
 import styled from 'styled-components'
+import { pagesStyles } from '../variables'
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-
-  padding-top: 6.5rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  position: relative;
+  ${pagesStyles}
 
   > .contentWrapper {
     max-width: 855px;
