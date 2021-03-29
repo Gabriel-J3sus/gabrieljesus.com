@@ -10,11 +10,19 @@ export const PostsContainer: React.FC<PostsContainerProps> = ({
   postsLength,
   children
 }) => {
+  if (children.length === 0) {
+    children = (
+      <div className="imageContainer">
+        <img src="no-post.svg" alt="Nenhum post encontrado" />
+      </div>
+    )
+  }
+
   return (
     <Container>
       <span>
         <h1>{title}</h1>
-        <h2>{postsLength} Post</h2>
+        <h2>{postsLength} Posts</h2>
       </span>
 
       <div className="PostsWrapper">{children}</div>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pagesStyles } from '../variables'
+import { noPostFound, pagesStyles } from '../variables'
 
 export const Container = styled.div`
   ${pagesStyles}
@@ -49,6 +49,10 @@ export const Container = styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-gap: 1rem;
+
+        > .imageContainer {
+          ${noPostFound}
+        }
       }
     }
   }
@@ -84,12 +88,19 @@ export const Container = styled.div`
     }
 
     > .worksContainer {
+      width: 100%;
       display: grid;
       grid-template-rows: auto;
       grid-template-columns: 1fr;
       grid-gap: 2rem;
 
       padding: 0 1.5rem;
+
+      > .imageContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 

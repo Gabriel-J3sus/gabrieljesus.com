@@ -20,7 +20,7 @@ export const CreatorDescription: React.FC = () => {
           magnam quisquam sit.
         </p>
 
-        <button>Baixar currículo</button>
+        {/* <button>Baixar currículo</button> */}
       </div>
     </Container>
   )

@@ -10,6 +10,12 @@ export const pagesStyles = css`
   align-items: center;
 `
 
+export const noPostFound = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 export const icon = css`
   width: 1.8rem;
   height: 1.8rem;

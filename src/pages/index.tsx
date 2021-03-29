@@ -1,3 +1,4 @@
+/* eslint-disable multiline-ternary */
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import Head from 'next/head'
@@ -42,17 +43,25 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
           </span>
 
           <div className="postsContainer">
-            {allBlogPostsData.map(
-              ({ slug, title, formatedDate, type, description }) => (
-                <Post
-                  key={slug}
-                  slug={slug}
-                  title={title}
-                  formatedDate={formatedDate}
-                  type={type}
-                  description={description}
-                />
-              )
+            {allBlogPostsData.length <= 0 ? (
+              <div className="imageContainer">
+                <img src="no-post.svg" alt="Nenhum post encontrado" />
+              </div>
+            ) : (
+              <>
+                {allBlogPostsData.map(
+                  ({ slug, title, formatedDate, type, description }) => (
+                    <Post
+                      key={slug}
+                      slug={slug}
+                      title={title}
+                      formatedDate={formatedDate}
+                      type={type}
+                      description={description}
+                    />
+                  )
+                )}
+              </>
             )}
           </div>
         </div>
@@ -67,17 +76,25 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
         </span>
 
         <div className="worksContainer">
-          {allProjectsPostsData.map(
-            ({ slug, title, year, type, description }) => (
-              <Work
-                key={slug}
-                slug={slug}
-                title={title}
-                year={year}
-                type={type}
-                description={description}
-              />
-            )
+          {allProjectsPostsData.length <= 0 ? (
+            <div className="imageContainer">
+              <img src="no-post.svg" alt="Nenhum post encontrado" />
+            </div>
+          ) : (
+            <>
+              {allProjectsPostsData.map(
+                ({ slug, title, year, type, description }) => (
+                  <Work
+                    key={slug}
+                    slug={slug}
+                    title={title}
+                    year={year}
+                    type={type}
+                    description={description}
+                  />
+                )
+              )}
+            </>
           )}
         </div>
       </div>

@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
 
-          <link rel="shortcut icon" href="favicon.png" type="image/png" />
+          <link rel="shortcut icon" href="logo.png" type="image/png" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
