@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { noPostFound } from '../variables'
 
 export const Container = styled.div`
   max-width: 855px;
@@ -42,12 +41,6 @@ export const Container = styled.div`
     opacity: 0;
 
     animation: up 1s forwards;
-
-    > .imageContainer {
-      ${noPostFound}
-
-      margin-top: 1rem;
-    }
   }
 
   @keyframes up {

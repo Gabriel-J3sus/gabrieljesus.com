@@ -3,6 +3,8 @@ import React from 'react'
 
 import { PostsContainerProps } from '../types/components/PostsContainerProps'
 
+import { NoPostFound } from './NoPostFound'
+
 import { Container } from '../styles/components/PostsContainer'
 
 export const PostsContainer: React.FC<PostsContainerProps> = ({
@@ -11,11 +13,7 @@ export const PostsContainer: React.FC<PostsContainerProps> = ({
   children
 }) => {
   if (children.length === 0) {
-    children = (
-      <div className="imageContainer">
-        <img src="no-post.svg" alt="Nenhum post encontrado" />
-      </div>
-    )
+    children = <NoPostFound />
   }
 
   return (

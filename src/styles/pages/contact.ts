@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { noPostFound, pagesStyles } from '../variables'
+import { pagesStyles } from '../variables'
 
 export const Container = styled.div`
   ${pagesStyles}
@@ -49,10 +49,6 @@ export const Container = styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-gap: 1rem;
-
-        > .imageContainer {
-          ${noPostFound}
-        }
       }
     }
   }

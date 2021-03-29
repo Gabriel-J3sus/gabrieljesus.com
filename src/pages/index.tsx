@@ -13,6 +13,7 @@ import { BlogPostsCardData } from '../types/BlogPostsProps'
 
 import { Header } from '../components/Header'
 import { CreatorDescription } from '../components/CreatorDescription'
+import { NoPostFound } from '../components/NoPostFound'
 import { Post } from '../components/PostComponent'
 import { Work } from '../components/WorkComponent'
 import { Footer } from '../components/Footer'
@@ -44,9 +45,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
 
           <div className="postsContainer">
             {allBlogPostsData.length <= 0 ? (
-              <div className="imageContainer">
-                <img src="no-post.svg" alt="Nenhum post encontrado" />
-              </div>
+              <NoPostFound />
             ) : (
               <>
                 {allBlogPostsData.map(
@@ -77,9 +76,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
 
         <div className="worksContainer">
           {allProjectsPostsData.length <= 0 ? (
-            <div className="imageContainer">
-              <img src="no-post.svg" alt="Nenhum post encontrado" />
-            </div>
+            <NoPostFound />
           ) : (
             <>
               {allProjectsPostsData.map(
