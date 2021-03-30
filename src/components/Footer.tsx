@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
         </a>
       </div>
 
-      <p>Copyright ©2020 All rights reserved </p>
+      <p>&#169; 2021 Gabriel Araújo de Jesus</p>
     </Container>
   )
 }
