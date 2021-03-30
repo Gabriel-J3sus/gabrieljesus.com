@@ -12,10 +12,10 @@ export interface ProjectPostsCardData {
 }
 
 export interface ProjectPostData {
-  ProjectPostData: {
-    title: string
-    year: string
-    type: string
-    contentHtml: string
+  ProjectPostData?: {
+    title?: string
+    year?: string
+    type?: string
+    contentHtml?: string
   }
 }

@@ -15,22 +15,22 @@ const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
   return (
     <Container>
       <Head>
-        <title>Work | {ProjectPostData.title}</title>
+        <title>Work | {ProjectPostData?.title}</title>
       </Head>
 
       <Header />
 
       <div className="contentWrapper">
-        <h1>{ProjectPostData.title}</h1>
+        <h1>{ProjectPostData?.title}</h1>
 
         <span className="typesAndData">
-          <p className="tag">{ProjectPostData.year}</p>
-          <p>{ProjectPostData.type}</p>
+          <p className="tag">{ProjectPostData?.year}</p>
+          <p>{ProjectPostData?.type}</p>
         </span>
 
         <div
           className="content"
-          dangerouslySetInnerHTML={{ __html: ProjectPostData.contentHtml }}
+          dangerouslySetInnerHTML={{ __html: ProjectPostData?.contentHtml }}
         />
       </div>
 
@@ -44,7 +44,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false
+    fallback: true
   }
 }
 

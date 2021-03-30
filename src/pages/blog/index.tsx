@@ -49,7 +49,8 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       allBlogPostsData
-    }
+    },
+    revalidate: 300
   }
 }
 export default blog
