@@ -21,7 +21,10 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
   const contact =
     page === 'contact'
       ? { color: `${colors.buttonBackground}` }
-      : { color: `${colors.primary}` }
+      : {
+          color: `${colors.primary}`,
+          onclick: () => 'document.body.style.overflowY = "scroll"'
+        }
 
   const work =
     page === 'work'
@@ -36,11 +39,10 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
       document.body.style.overflowY = 'hidden'
       modal.classList.add('on')
     } else {
-      document.body.style.overflowY = 'auto'
+      document.body.style.overflowY = 'scroll'
       modal.classList.remove('on')
     }
   }, [])
-
   return (
     <Container>
       <button type="button" onClick={toggleTheme}>

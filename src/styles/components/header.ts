@@ -79,7 +79,7 @@ export const Container = styled.header`
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 99;
 
     width: 100vw;
     height: 100vh;

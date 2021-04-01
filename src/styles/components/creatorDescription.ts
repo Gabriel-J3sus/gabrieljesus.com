@@ -7,16 +7,46 @@ export const Container = styled.div`
 
   margin-bottom: 3.6rem;
 
-  > img {
-    width: 10.6rem;
-    height: 10.6rem;
+  > .avatarAndTec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    padding: 0.2rem;
-    border: 2px solid ${props => props.theme.colors.line};
+    > img {
+      width: 10.6rem;
+      height: 10.6rem;
 
-    margin-left: 0;
+      padding: 0.2rem;
+      border: 2px solid ${props => props.theme.colors.line};
 
-    border-radius: 100%;
+      margin-left: 0;
+
+      border-radius: 100%;
+    }
+
+    > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-top: 1.5rem;
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+          margin-right: 0.5rem;
+        }
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
   }
 
   > .description {
@@ -70,11 +100,23 @@ export const Container = styled.div`
 
     flex-direction: row-reverse;
 
-    > img {
-      width: 15rem;
-      height: 15rem;
-
+    > .avatarAndTec {
       margin-left: 5.5rem;
+      height: 100%;
+
+      > img {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      > span {
+        > a {
+          img {
+            width: 1.7rem;
+            height: 1.7rem;
+          }
+        }
+      }
     }
 
     > .description {
