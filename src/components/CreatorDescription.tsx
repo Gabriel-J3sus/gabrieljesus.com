@@ -72,12 +72,11 @@ export const CreatorDescription: React.FC = () => {
       </div>
 
       <div className="description">
-        <h1>Olá, Eu sou o Gabriel, um desenvolvedor de softwares.</h1>
+        <h1>Olá, eu sou o Gabriel, um desenvolvedor de softwares.</h1>
         <p>
           Bem-vindo ao meu blog. Aqui, eu compartilho alguns fatos interessantes
           do mundo da programação, e mostro os meus projetos mais importantes,
-          com o objetivo de apresentar o meu crescimento como desenvolverdor
-          frontend.
+          com o objetivo de expor o meu crescimento como desenvolvedor.
         </p>
 
         {/* <button>Baixar currículo</button> */}

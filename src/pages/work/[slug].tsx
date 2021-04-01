@@ -15,7 +15,7 @@ const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
   return (
     <Container>
       <Head>
-        <title>Work | {ProjectPostData?.title}</title>
+        <title>Projeto | {ProjectPostData?.title}</title>
       </Head>
 
       <Header />

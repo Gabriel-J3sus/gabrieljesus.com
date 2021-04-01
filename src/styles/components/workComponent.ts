@@ -18,7 +18,7 @@ export const Container = styled.div`
   > img {
     width: 100%;
     height: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 
     border-radius: 6px;
   }
@@ -64,7 +64,7 @@ export const Container = styled.div`
     transform: translateY(-2px);
   }
 
-  @media (min-width: 440px) {
+  @media (min-width: 530px) {
     flex-direction: row;
     padding-bottom: 0;
     padding-left: 0;
@@ -79,7 +79,7 @@ export const Container = styled.div`
 
     > .description {
       > h2 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
       }
 
       > span {

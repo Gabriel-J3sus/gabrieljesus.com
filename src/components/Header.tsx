@@ -19,7 +19,7 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
       : { color: `${colors.primary}` }
 
   const contact =
-    page === 'contact'
+    page === 'home'
       ? { color: `${colors.buttonBackground}` }
       : { color: `${colors.primary}` }
 
@@ -61,7 +61,7 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
         </Link>
 
         <Link href="/">
-          <p style={contact}>Contato</p>
+          <p style={contact}>Home</p>
         </Link>
       </div>
       <div className="modal">
@@ -92,7 +92,7 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
 
           <Link href="/">
             <span onClick={handleOverflow}>
-              <h3 style={contact}>Contato</h3>
+              <h3 style={contact}>Home</h3>
             </span>
           </Link>
         </nav>

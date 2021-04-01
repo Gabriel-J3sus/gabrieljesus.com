@@ -28,13 +28,15 @@ const work: React.FC<ProjectPostsCardData> = ({ allProjectsPostsData }) => {
         postsLength={allProjectsPostsData.length}
       >
         {allProjectsPostsData.map(
-          ({ slug, title, year, type, description }) => (
+          ({ slug, title, year, type, darkImage, lightImage, description }) => (
             <Work
               key={slug}
               slug={slug}
               title={title}
               year={year}
               type={type}
+              darkImage={darkImage}
+              lightImage={lightImage}
               description={description}
             />
           )

@@ -30,7 +30,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
         <title>Contato | Gabriel Araújo de Jesus</title>
       </Head>
 
-      <Header page="contact" />
+      <Header page="home" />
 
       <CreatorDescription />
 
@@ -80,13 +80,23 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
           ) : (
             <>
               {allProjectsPostsData.map(
-                ({ slug, title, year, type, description }) => (
+                ({
+                  slug,
+                  title,
+                  year,
+                  type,
+                  darkImage,
+                  lightImage,
+                  description
+                }) => (
                   <Work
                     key={slug}
                     slug={slug}
                     title={title}
                     year={year}
                     type={type}
+                    darkImage={darkImage}
+                    lightImage={lightImage}
                     description={description}
                   />
                 )

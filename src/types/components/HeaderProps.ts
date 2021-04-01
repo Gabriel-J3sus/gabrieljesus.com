@@ -1,3 +1,3 @@
 export interface PageLocation {
-  page?: 'blog' | 'contact' | 'work'
+  page?: 'blog' | 'home' | 'work'
 }

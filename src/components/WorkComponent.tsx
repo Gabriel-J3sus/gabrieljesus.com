@@ -1,6 +1,7 @@
 /* eslint-disable no-use-before-define */
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/link'
+import { ThemeContext } from 'styled-components'
 
 import { ProjectDataProps } from '../types/ProjectsPostProps'
 import { Container } from '../styles/components/workComponent'
@@ -10,14 +11,18 @@ export const Work: React.FC<ProjectDataProps> = ({
   title,
   year,
   type,
+  darkImage,
+  lightImage,
   description
 }) => {
+  const theme = useContext(ThemeContext)
+
   return (
     <Link href={`/work/${slug}`}>
       <Container>
         <img
-          src="https://github.com/Gabriel-J3sus.png"
-          alt="Gabriel Araújo de Jesus"
+          src={theme.title === 'dark' ? darkImage : lightImage}
+          alt={title}
         />
 
         <div className="description">

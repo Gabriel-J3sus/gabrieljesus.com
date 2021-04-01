@@ -4,6 +4,8 @@ export interface ProjectDataProps {
   date?: string
   year: string
   type: string
+  darkImage: string
+  lightImage: string
   description: string
 }
 
