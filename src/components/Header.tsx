@@ -21,10 +21,7 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
   const contact =
     page === 'contact'
       ? { color: `${colors.buttonBackground}` }
-      : {
-          color: `${colors.primary}`,
-          onclick: () => 'document.body.style.overflowY = "scroll"'
-        }
+      : { color: `${colors.primary}` }
 
   const work =
     page === 'work'
@@ -39,10 +36,15 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
       document.body.style.overflowY = 'hidden'
       modal.classList.add('on')
     } else {
-      document.body.style.overflowY = 'scroll'
+      document.body.style.overflowY = 'auto'
       modal.classList.remove('on')
     }
   }, [])
+
+  const handleOverflow = useCallback(() => {
+    document.body.style.overflowY = 'auto'
+  }, [])
+
   return (
     <Container>
       <button type="button" onClick={toggleTheme}>
@@ -77,19 +79,19 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
 
         <nav>
           <Link href="/work">
-            <span>
+            <span onClick={handleOverflow}>
               <h3 style={work}>Projetos</h3>
             </span>
           </Link>
 
           <Link href="/blog">
-            <span>
+            <span onClick={handleOverflow}>
               <h3 style={blog}>Blog</h3>
             </span>
           </Link>
 
           <Link href="/">
-            <span>
+            <span onClick={handleOverflow}>
               <h3 style={contact}>Contato</h3>
             </span>
           </Link>

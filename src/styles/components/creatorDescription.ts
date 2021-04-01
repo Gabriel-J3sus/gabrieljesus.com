@@ -37,6 +37,8 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
 
+        transition: 0.2s;
+
         &:not(:last-child) {
           margin-right: 0.5rem;
         }
@@ -44,6 +46,10 @@ export const Container = styled.div`
         img {
           width: 1.5rem;
           height: 1.5rem;
+        }
+
+        &:hover {
+          transform: translateY(-3px);
         }
       }
     }
