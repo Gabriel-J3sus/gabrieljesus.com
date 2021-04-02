@@ -59,6 +59,33 @@ export const Container = styled.div`
         font-size: 1.5rem;
         font-weight: 500;
       }
+      > .imageContainer {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > img {
+          width: 16.5rem;
+
+          @media (min-width: 440px) {
+            width: 20.5rem;
+          }
+
+          @media (min-width: 550px) {
+            width: 28.5rem;
+          }
+
+          @media (min-width: 760px) {
+            width: 34.5rem;
+          }
+
+          @media (min-width: 850px) {
+            width: 100%;
+          }
+        }
+      }
 
       > p a,
       h3 a {

@@ -13,7 +13,9 @@ Com a necessidade de práticar o que estou aprendendo ultimamente em relação a
 <br />
 <br />
 
-<img src="../../.github/gabrjesus.png" alt="Gabrjesus.com" />
+<div class="imageContainer">
+  <img src="https://raw.githubusercontent.com/Gabriel-J3sus/Move.It-NLW4/main/.github/moveit.png" alt="Gabrjesus.com" />
+</div>
 
 <br />
 <br />
