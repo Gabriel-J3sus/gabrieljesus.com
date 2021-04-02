@@ -41,3 +41,7 @@ This was my first big project, done entirely by me, where I managed to prove to 
 - Start server`yarn dev`
 
 Start your browser at [`localhost:3000`](http://localhost:3000).
+
+## 🏃‍♂️ Running
+
+- [gabrjesus.vercel.app](https://gabrjesus.vercel.app/)
