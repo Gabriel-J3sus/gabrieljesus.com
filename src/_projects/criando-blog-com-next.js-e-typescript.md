@@ -13,6 +13,11 @@ Com a necessidade de práticar o que estou aprendendo ultimamente em relação a
 <br />
 <br />
 
+<img src="../../.github/gabrjesus.png" alt="Gabrjesus.com" />
+
+<br />
+<br />
+
 # Sobre o Projeto
 
 <br />
