@@ -42,7 +42,9 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
   }, [])
 
   const handleOverflow = useCallback(() => {
+    const modal = document.querySelector('.modal')
     document.body.style.overflowY = 'auto'
+    modal.classList.remove('on')
   }, [])
 
   return (

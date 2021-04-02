@@ -1,9 +1,9 @@
 ---
-  title: 'Bloguinho'
-  date: '03-01-2021'
-  formatedDate: '03 Jan 2021'
-  type: 'test'
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  title: 'O que é React.js'
+  date: '02-04-2021'
+  formatedDate: '02 Abr 2021'
+  type: 'Reactjs'
+  description: 'Como definido pelo Facebook, seu desenvolvedor, React é “uma biblioteca JavaScript declarativa, eficiente e flexível para a criação de interfaces de usuário (UI)”.'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

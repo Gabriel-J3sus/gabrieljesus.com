@@ -1,5 +1,3 @@
-import { DefaultTheme } from 'styled-components'
-
 export default {
   title: 'dark',
 
