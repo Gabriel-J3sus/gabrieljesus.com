@@ -3,8 +3,7 @@
   date: '01-04-2021'
   year: '2021'
   type: 'Blog | Next.js + Typescript'
-  darkImage: 'https://og-image.vercel.app/.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-white-logo.svg&images=https%3A%2F%2Fcdn.worldvectorlogo.com%2Flogos%2Ftypescript.svg'
-  lightImage: 'https://og-image.vercel.app/.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg&images=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fremojansen%2Flogo.ts%40master%2Fts.svg'
+  image: '/logo-full.svg'
   description: 'Com a necessidade de práticar o que estou aprendendo ultimamente em relação a Reactjs, Typescript, Next.js e Nodejs, decidi criar a minha primeira aplicação web, um blog.'
 ---
 
@@ -14,7 +13,7 @@ Com a necessidade de práticar o que estou aprendendo ultimamente em relação a
 <br />
 
 <div class="imageContainer">
-  <img src="https://raw.githubusercontent.com/Gabriel-J3sus/Move.It-NLW4/main/.github/moveit.png" alt="Gabrjesus.com" />
+  <img src="https://raw.githubusercontent.com/Gabriel-J3sus/gabrieljesus.com/main/.github/gabrjesus.png" alt="gabrjesus.com" />
 </div>
 
 <br />

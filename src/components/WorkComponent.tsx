@@ -11,8 +11,7 @@ export const Work: React.FC<ProjectDataProps> = ({
   title,
   year,
   type,
-  darkImage,
-  lightImage,
+  image,
   description
 }) => {
   const theme = useContext(ThemeContext)
@@ -21,7 +20,8 @@ export const Work: React.FC<ProjectDataProps> = ({
     <Link href={`/work/${slug}`}>
       <Container>
         <img
-          src={theme.title === 'dark' ? darkImage : lightImage}
+          // src={theme.title === 'dark' ? darkImage : lightImage}
+          src={image}
           alt={title}
         />
 

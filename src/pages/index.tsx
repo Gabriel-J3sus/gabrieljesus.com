@@ -44,7 +44,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
           </span>
 
           <div className="postsContainer">
-            {allBlogPostsData.length <= 0 ? (
+            {/* {allBlogPostsData.length <= 0 ? (
               <NoPostFound />
             ) : (
               <>
@@ -61,7 +61,8 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
                   )
                 )}
               </>
-            )}
+            )} */}
+            <NoPostFound />
           </div>
         </div>
       </div>
@@ -80,23 +81,14 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
           ) : (
             <>
               {allProjectsPostsData.map(
-                ({
-                  slug,
-                  title,
-                  year,
-                  type,
-                  darkImage,
-                  lightImage,
-                  description
-                }) => (
+                ({ slug, title, year, type, image, description }) => (
                   <Work
                     key={slug}
                     slug={slug}
                     title={title}
                     year={year}
                     type={type}
-                    darkImage={darkImage}
-                    lightImage={lightImage}
+                    image={image}
                     description={description}
                   />
                 )

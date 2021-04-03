@@ -12,7 +12,7 @@ export const PostsContainer: React.FC<PostsContainerProps> = ({
   postsLength,
   children
 }) => {
-  if (children.length === 0) {
+  if (postsLength === 0) {
     children = <NoPostFound />
   }
 
