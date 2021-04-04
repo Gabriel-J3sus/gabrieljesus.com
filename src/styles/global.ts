@@ -12,6 +12,7 @@ export default createGlobalStyle`
     overflow-x: hidden;
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.primary};
+    scroll-behavior: smooth;
     transition: color 0.2s;
   }
 

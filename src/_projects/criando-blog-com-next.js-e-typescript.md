@@ -23,7 +23,7 @@ Com a necessidade de práticar o que estou aprendendo ultimamente em relação a
 
 <br />
 
-Esse foi o meu primeiro grande projeto, feito totalmente por mim, onde eu consegui provar para mim mesmo, que tudo o que estou aprendendo não está sendo em vão.
+Esse foi o meu primeiro grande projeto, feito totalmente por mim, onde eu consegui provar que tudo o que estou aprendendo não está sendo em vão.
 
 <br />
 

@@ -44,6 +44,7 @@ export const Container = styled.header`
   > .modal {
     display: flex;
     flex-direction: column;
+
     > .openAndCloseWrapper {
       > .menu {
         width: 40px;
@@ -81,6 +82,8 @@ export const Container = styled.header`
     left: 0;
     z-index: 99;
 
+    overflow-y: hidden;
+
     width: 100vw;
     height: 100vh;
 
@@ -97,6 +100,8 @@ export const Container = styled.header`
         display: flex;
         align-items: center;
         justify-content: center;
+
+        margin-right: 0.5rem;
 
         transition: 0.2s;
 

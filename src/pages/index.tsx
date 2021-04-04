@@ -27,7 +27,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
   return (
     <Container>
       <Head>
-        <title>Contato | Gabriel Araújo de Jesus</title>
+        <title>Home | Gabriel Araújo de Jesus</title>
       </Head>
 
       <Header page="home" />
