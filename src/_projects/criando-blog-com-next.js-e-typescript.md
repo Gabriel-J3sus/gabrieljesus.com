@@ -72,7 +72,7 @@ Alguns dos principais desafios que passei foi a criação do motor de leitura de
 
 <br />
 
-Essa foi a primeira vez que utilizei o Eslint para a organização do projeto. Foi um pouco trabalhoso para configurar, mas premitiu que meu código ficasse muito mais legível, e explicativo.
+Essa foi a primeira vez que utilizei o Eslint para a organização do projeto. Foi um pouco trabalhoso para configurar, mas permitiu que meu código ficasse muito mais legível, e explicativo.
 
 <br />
 <br />

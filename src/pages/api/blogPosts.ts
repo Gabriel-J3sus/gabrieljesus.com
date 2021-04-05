@@ -51,7 +51,7 @@ export function getAllBlogPostsIds() {
   })
 }
 
-export async function getBlogPostData(slug) {
+export async function getBlogPostData(slug: string | string[]) {
   const fullPath = path.join(postsDirectory, `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf-8')
 
