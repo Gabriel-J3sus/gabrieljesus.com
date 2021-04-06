@@ -44,37 +44,51 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
 
+          {/* Primary Meta Tags */}
           <meta
-            property="description"
+            name="title"
+            content="Olá, eu sou o Gabriel, um desenvolvedor de softwares."
+          />
+          <meta
+            name="description"
             content="Eu sou o Gabriel, aqui, eu compartilho alguns fatos interessantes do mundo da programação, e mostro os meus projetos mais importantes, com o objetivo de expor o meu crescimento como desenvolvedor."
           />
 
-          <meta property="og:site_name" content="Gabriel Jesus Website" />
-          <meta property="og:title" content="Bem-vindo ao meu blog!!" />
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
           <meta property="og:url" content="https://gabrjesus.vercel.app/" />
+          <meta
+            property="og:title"
+            content="Olá, eu sou o Gabriel, um desenvolvedor de softwares."
+          />
           <meta
             property="og:description"
             content="Eu sou o Gabriel, aqui, eu compartilho alguns fatos interessantes do mundo da programação, e mostro os meus projetos mais importantes, com o objetivo de expor o meu crescimento como desenvolvedor."
           />
-
           <meta
             property="og:image"
             content="https://gabrjesus.vercel.app/logo-full.svg"
           />
-          <meta property="og:image:type" content="image/svg" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
 
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Bem-vindo ao meu blog!!" />
+          {/* Twitter  */}
+          <meta property="twitter:card" content="summary_large_image" />
           <meta
-            name="twitter:description"
+            property="twitter:url"
+            content="https://gabrjesus.vercel.app/"
+          />
+          <meta
+            property="twitter:title"
+            content="Olá, eu sou o Gabriel, um desenvolvedor de softwares."
+          />
+          <meta
+            property="twitter:description"
             content="Eu sou o Gabriel, aqui, eu compartilho alguns fatos interessantes do mundo da programação, e mostro os meus projetos mais importantes, com o objetivo de expor o meu crescimento como desenvolvedor."
           />
           <meta
-            name="twitter:image"
+            property="twitter:image"
             content="https://gabrjesus.vercel.app/logo-full.svg"
           />
+
           <link rel="shortcut icon" href="logo.png" type="image/png" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />

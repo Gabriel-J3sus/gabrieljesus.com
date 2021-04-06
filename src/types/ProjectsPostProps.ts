@@ -13,10 +13,7 @@ export interface ProjectPostsCardData {
 }
 
 export interface ProjectPostData {
-  ProjectPostData?: {
-    title?: string
-    year?: string
-    type?: string
+  ProjectPostData?: ProjectDataProps & {
     contentHtml?: string
   }
 }
