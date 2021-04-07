@@ -3,7 +3,7 @@
   date: '01-04-2021'
   year: '2021'
   type: 'Blog | Next.js + Typescript'
-  image: '/logo-full.svg'
+  image: 'https://gabrjesus.vercel.app/logo-full.svg'
   description: 'Com a necessidade de práticar o que estou aprendendo ultimamente em relação a Reactjs, Typescript, Next.js e Nodejs, decidi criar a minha primeira aplicação web, um blog.'
 ---
 

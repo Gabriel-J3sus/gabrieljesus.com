@@ -15,7 +15,42 @@ const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
   return (
     <Container>
       <Head>
-        <title>Projeto | {ProjectPostData?.title}</title>
+        {/* <!-- Primary Meta Tags --> */}
+        <title>{ProjectPostData?.title} | Projeto</title>
+        <meta name="title" content={`${ProjectPostData?.title} | Projeto`} />
+        <meta name="description" content={`${ProjectPostData?.description}`} />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://gabrjesus.vercel.app/work/${ProjectPostData?.slug}`}
+        />
+        <meta
+          property="og:title"
+          content={`${ProjectPostData?.title} | Projeto`}
+        />
+        <meta
+          property="og:description"
+          content={`${ProjectPostData?.description}`}
+        />
+        <meta property="og:image" content={ProjectPostData?.image} />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content={`https://gabrjesus.vercel.app/work/${ProjectPostData?.slug}`}
+        />
+        <meta
+          property="twitter:title"
+          content={`${ProjectPostData?.title} | Projeto`}
+        />
+        <meta
+          property="twitter:description"
+          content={`${ProjectPostData?.description}`}
+        />
+        <meta property="twitter:image" content={ProjectPostData?.image} />
       </Head>
 
       <Header />
@@ -44,7 +79,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true
+    fallback: false
   }
 }
 
