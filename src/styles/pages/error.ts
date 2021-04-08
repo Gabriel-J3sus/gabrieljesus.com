@@ -18,7 +18,7 @@ export const Container = styled.div`
 
       font-size: 1.8rem;
       font-weight: 700;
-      line-height: 3.75rem;
+      line-height: 3rem;
     }
 
     > span {
