@@ -37,7 +37,7 @@ const Error: NextPage<ErrorPage> = ({ statusCode }) => {
             : 'An error occurred on client, please return to home'}
         </p>
 
-        <button onClick={handleNavigateToHome}>Voltar para Home</button>
+        <button onClick={handleNavigateToHome}>Return to home</button>
       </div>
     </Container>
   )
