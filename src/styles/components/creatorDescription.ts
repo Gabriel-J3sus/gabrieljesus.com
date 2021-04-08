@@ -138,7 +138,7 @@ export const Container = styled.div`
         font-size: 2.75rem;
       }
 
-      > P {
+      > p {
         max-width: none;
         margin: 2rem 0 2.3rem;
 

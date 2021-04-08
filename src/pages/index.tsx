@@ -18,7 +18,7 @@ import { Post } from '../components/PostComponent'
 import { Work } from '../components/WorkComponent'
 import { Footer } from '../components/Footer'
 
-import { Container } from '../styles/pages/contact'
+import { Container } from '../styles/pages/home'
 
 const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
   allBlogPostsData,
