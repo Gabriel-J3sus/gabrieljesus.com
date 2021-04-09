@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { h1FontStyles } from '../variables'
 
 export const Container = styled.div`
   display: flex;
@@ -66,8 +67,7 @@ export const Container = styled.div`
       margin-top: 2.1rem;
 
       text-align: center;
-      font-size: 2rem;
-      font-weight: 700;
+      ${h1FontStyles}
     }
 
     > p {
@@ -75,28 +75,6 @@ export const Container = styled.div`
       margin: 1.3rem 0;
 
       text-align: center;
-    }
-
-    > button {
-      width: 13rem;
-      height: 2.9rem;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 2px;
-      background: ${props => props.theme.colors.buttonBackground};
-
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: #fff;
-
-      transition: 0.2s;
-
-      &:hover {
-        filter: brightness(0.9);
-      }
     }
   }
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { h2FontStyles } from '../variables'
 
 export const Container = styled.div`
   width: 100%;
@@ -13,7 +14,7 @@ export const Container = styled.div`
   transition: 0.2s;
 
   > h2 {
-    font-size: 1.3rem;
+    ${h2FontStyles}
     font-weight: 700;
   }
 

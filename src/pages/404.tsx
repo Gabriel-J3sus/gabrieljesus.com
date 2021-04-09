@@ -3,6 +3,11 @@ import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
+import {
+  ButtonComponent,
+  CardDetailsComponent
+} from '../components/SmallerComponents'
+
 import { Container } from '../styles/pages/error'
 
 const Custom404: React.FC = () => {
@@ -21,17 +26,21 @@ const Custom404: React.FC = () => {
       <div className="contentWrapper">
         <h1>404 - Página não encontrada</h1>
 
-        <span className="typesAndData">
-          <p className="tag">Error</p>
-          <p>404 | Not Found</p>
-        </span>
+        <CardDetailsComponent
+          year="Error"
+          type="404 | Not Found"
+          tagColor="highlighted"
+        />
 
         <p>
           Olá!!! Você está tentando acessar uma página inexistente, mas não há
           nenhum problema!!! Apenas clique no botão para retornar para a home.
         </p>
 
-        <button onClick={handleNavigateToHome}>Voltar para Home</button>
+        <ButtonComponent
+          HandleButtonOnClickFunctions={handleNavigateToHome}
+          title="Voltar para Home"
+        />
       </div>
     </Container>
   )

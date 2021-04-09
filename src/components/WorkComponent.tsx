@@ -1,9 +1,11 @@
 /* eslint-disable no-use-before-define */
-import React, { useContext } from 'react'
+import React from 'react'
 import Link from 'next/link'
-import { ThemeContext } from 'styled-components'
 
 import { ProjectDataProps } from '../types/ProjectsPostProps'
+
+import { CardDetailsComponent } from './SmallerComponents'
+
 import { Container } from '../styles/components/workComponent'
 
 export const Work: React.FC<ProjectDataProps> = ({
@@ -14,8 +16,6 @@ export const Work: React.FC<ProjectDataProps> = ({
   image,
   description
 }) => {
-  const theme = useContext(ThemeContext)
-
   return (
     <Link href={`/work/${slug}`}>
       <Container>
@@ -28,10 +28,7 @@ export const Work: React.FC<ProjectDataProps> = ({
         <div className="description">
           <h2>{title}</h2>
 
-          <span className="typesAndData">
-            <p className="tag">{year}</p>
-            <p>{type}</p>
-          </span>
+          <CardDetailsComponent year={year} type={type} tagColor="normal" />
 
           <p>{description}</p>
         </div>

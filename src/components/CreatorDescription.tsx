@@ -4,6 +4,10 @@ import React from 'react'
 import { Container } from '../styles/components/creatorDescription'
 
 export const CreatorDescription: React.FC = () => {
+  // function handleCVDownload() {
+  //   console.log('ok')
+  // }
+
   return (
     <Container>
       <div className="avatarAndTec">
@@ -79,7 +83,10 @@ export const CreatorDescription: React.FC = () => {
           com o objetivo de expor o meu crescimento como desenvolvedor.
         </p>
 
-        {/* <button>Baixar currículo</button> */}
+        {/* <ButtonComponent
+          HandleButtonOnClickFunctions={handleCVDownload}
+          title="Baixar currículo"
+        /> */}
       </div>
     </Container>
   )

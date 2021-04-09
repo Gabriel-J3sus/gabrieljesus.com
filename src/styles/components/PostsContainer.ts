@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { h1FontStyles } from '../variables'
 
 export const Container = styled.div`
   max-width: 855px;
@@ -17,9 +18,7 @@ export const Container = styled.div`
     margin-bottom: 1rem;
 
     > h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      line-height: 3rem;
+      ${h1FontStyles}
     }
 
     > h2 {
@@ -59,6 +58,12 @@ export const Container = styled.div`
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
+      > h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 3rem;
+      }
     }
   }
 `

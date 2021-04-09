@@ -10,6 +10,30 @@ export const pagesStyles = css`
   align-items: center;
 `
 
+export const h1FontStyles = css`
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3rem;
+
+  @media (min-width: 850px) {
+    font-size: 2.75rem;
+  }
+`
+
+export const h2FontStyles = css`
+  font-size: 1.5rem;
+  font-weight: 500;
+`
+
+export const h3FontStyles = css`
+  font-size: 1.1rem;
+  font-weight: 400;
+
+  @media (min-width: 850px) {
+    font-size: 1.3rem;
+  }
+`
+
 export const icon = css`
   width: 1.8rem;
   height: 1.8rem;

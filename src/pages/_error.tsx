@@ -4,6 +4,8 @@ import React from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 
+import { CardDetailsComponent } from '../components/SmallerComponents'
+
 import { Container } from '../styles/pages/error'
 
 interface ErrorPage {
@@ -26,10 +28,11 @@ const Error: NextPage<ErrorPage> = ({ statusCode }) => {
             : 'An error occurred on client'}
         </h1>
 
-        <span className="typesAndData">
-          <p className="tag">Error</p>
-          <p>{statusCode} | Error</p>
-        </span>
+        <CardDetailsComponent
+          year="Error"
+          type={`${statusCode} | Error`}
+          tagColor="highlighted"
+        />
 
         <p>
           {statusCode

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { BsMoon, BsSun } from 'react-icons/bs'
-import { icon } from '../variables'
+import { h1FontStyles, icon } from '../variables'
 
 export const Container = styled.header`
   position: absolute;
@@ -147,8 +147,8 @@ export const Container = styled.header`
 
         transition: all 0.2s;
 
-        > h3 {
-          font-size: 2rem;
+        > h1 {
+          ${h1FontStyles}
         }
       }
       span:not(:first-child) {
@@ -173,6 +173,8 @@ export const Container = styled.header`
         font-size: 1.25rem;
         font-weight: 500;
 
+        margin-left: 2rem;
+
         cursor: pointer;
         transition: 0.2s;
       }
@@ -180,10 +182,6 @@ export const Container = styled.header`
       p:hover {
         color: ${props => props.theme.colors.buttonBackground} !important;
       } //It gives preference even when the inline style being more powerfull
-
-      p {
-        margin-left: 2rem;
-      }
     }
 
     > .modal {

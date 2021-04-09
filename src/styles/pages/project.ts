@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pagesStyles } from '../variables'
+import { pagesStyles, h1FontStyles, h2FontStyles } from '../variables'
 
 export const Container = styled.div`
   ${pagesStyles}
@@ -16,9 +16,7 @@ export const Container = styled.div`
     > h1 {
       margin-bottom: 1rem;
 
-      font-size: 1.8rem;
-      font-weight: 700;
-      line-height: 3.75rem;
+      ${h1FontStyles}
     }
 
     > span {
@@ -42,13 +40,13 @@ export const Container = styled.div`
         background: ${props => props.theme.colors.buttonBackground};
         color: #fff;
         border-radius: 1rem;
-        font-weight: 900;
+        font-weight: 700;
       }
     }
 
     > .content {
       > h1 {
-        font-size: 1.8rem;
+        ${h1FontStyles}
         font-weight: 500;
 
         padding-bottom: 0.3rem;
@@ -56,8 +54,7 @@ export const Container = styled.div`
       }
 
       > h2 {
-        font-size: 1.5rem;
-        font-weight: 500;
+        ${h2FontStyles}
       }
       > .imageContainer {
         width: 100%;

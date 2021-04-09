@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pagesStyles } from '../variables'
+import { h3FontStyles, pagesStyles } from '../variables'
 
 export const Container = styled.div`
   ${pagesStyles}
@@ -32,8 +32,7 @@ export const Container = styled.div`
         margin-bottom: 2.5rem;
 
         > h3 {
-          font-size: 1.1rem;
-          font-weight: 400;
+          ${h3FontStyles}
         }
 
         > p {
@@ -74,8 +73,7 @@ export const Container = styled.div`
       margin-bottom: 2.5rem;
 
       > h3 {
-        font-size: 1.1rem;
-        font-weight: 400;
+        ${h3FontStyles}
       }
 
       > p {
@@ -113,10 +111,6 @@ export const Container = styled.div`
 
           margin-bottom: 1.3rem;
 
-          > h3 {
-            font-size: 1.3rem;
-          }
-
           > p {
             display: block;
             color: ${props => props.theme.colors.secondary};
@@ -146,11 +140,6 @@ export const Container = styled.div`
         justify-content: space-between;
 
         margin-bottom: 2.5rem;
-
-        > h3 {
-          font-size: 1.3rem;
-          font-weight: 400;
-        }
 
         > p {
           display: block;

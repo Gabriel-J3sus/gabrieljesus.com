@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { h2FontStyles } from '../variables'
 
 export const Container = styled.div`
   display: flex;
@@ -28,34 +29,8 @@ export const Container = styled.div`
     flex-direction: column;
 
     > h2 {
-      font-size: 1.5rem;
+      ${h2FontStyles}
       font-weight: 700;
-    }
-
-    > span {
-      display: flex;
-
-      margin: 1rem 0 1.5rem;
-
-      > p {
-        color: #8695a4;
-      }
-
-      > .tag {
-        width: 3.8rem;
-        height: 1.5rem;
-
-        margin-right: 1.25rem;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background: ${props => props.theme.colors.tagBackground};
-        color: #fff;
-        border-radius: 1rem;
-        font-weight: 900;
-      }
     }
   }
 
@@ -81,10 +56,6 @@ export const Container = styled.div`
       > h2 {
         font-size: 1.1rem;
       }
-
-      > span {
-        margin: 0.5rem 0 1rem;
-      }
     }
   }
 
@@ -92,10 +63,6 @@ export const Container = styled.div`
     > .description {
       > h2 {
         font-size: 1.8rem;
-      }
-
-      > span {
-        margin: 1rem 0 2rem;
       }
     }
   }
