@@ -1,9 +1,11 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
+import Link from 'next/link'
 
 import { BlogDataProps } from '../types/BlogPostsProps'
 
 import { Container } from '../styles/components/postComponent'
+import { BlogPostDetailsComponent } from './SmallerComponents'
 
 export const Post: React.FC<BlogDataProps> = ({
   slug,
@@ -13,14 +15,14 @@ export const Post: React.FC<BlogDataProps> = ({
   description
 }) => {
   return (
-    <Container>
-      <h2>{title}</h2>
+    <Link href={`/blog/${slug}`}>
+      <Container>
+        <h2>{title}</h2>
 
-      <p className="dateAndTime">
-        {formatedDate} | {type}
-      </p>
+        <BlogPostDetailsComponent formatedDate={formatedDate} type={type} />
 
-      <p>{description}</p>
-    </Container>
+        <p>{description}</p>
+      </Container>
+    </Link>
   )
 }

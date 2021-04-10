@@ -1,7 +1,12 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 
-import { Container, Github, Instagram } from '../styles/components/footer'
+import {
+  Container,
+  Github,
+  Instagram,
+  Rocket
+} from '../styles/components/footer'
 
 export const Footer: React.FC = () => {
   return (
@@ -20,6 +25,14 @@ export const Footer: React.FC = () => {
           rel="noopener noreferrer"
         >
           <Instagram />
+        </a>
+
+        <a
+          target="_blank"
+          href="https://app.rocketseat.com.br/me/gabriel-jesus-1596360319"
+          rel="noopener noreferrer"
+        >
+          <Rocket />
         </a>
       </div>
 

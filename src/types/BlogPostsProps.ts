@@ -12,10 +12,7 @@ export interface BlogPostsCardData {
 }
 
 export interface BlogPostData {
-  BlogPostData: {
-    title: string
-    formatedDate: string
-    type: string
+  BlogPostData: BlogDataProps & {
     contentHtml: string
   }
 }

@@ -11,3 +11,8 @@ export interface CardDetailsProps {
   type: string
   tagColor: 'normal' | 'highlighted'
 }
+
+export interface BlogPostDetailsProps {
+  type: string
+  formatedDate: string
+}

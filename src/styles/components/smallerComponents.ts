@@ -62,3 +62,13 @@ export const CardDetailsContainer = styled.span`
     margin: 1rem 0 2rem;
   }
 `
+
+export const BlogPostDetailsContainer = styled.p`
+  margin-bottom: 1.05rem;
+
+  line-height: 29px;
+
+  > span {
+    color: #8695a4;
+  }
+`

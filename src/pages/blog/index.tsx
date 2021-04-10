@@ -61,7 +61,7 @@ const blog: React.FC<BlogPostsCardData> = ({ allBlogPostsData }) => {
 
       <Header page="blog" />
       {/* allBlogPostsData.length */}
-      <PostsContainer title="Blog" postsLength={0}>
+      <PostsContainer title="Blog" postsLength={1}>
         {allBlogPostsData.map(
           ({ slug, title, formatedDate, type, description }) => (
             <Post

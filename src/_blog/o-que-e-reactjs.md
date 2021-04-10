@@ -2,7 +2,7 @@
   title: 'O que é React.js'
   date: '02-04-2021'
   formatedDate: '02 Abr 2021'
-  type: 'Reactjs'
+  type: 'Frontend library, React.js'
   description: 'Como definido pelo Facebook, seu desenvolvedor, React é “uma biblioteca JavaScript declarativa, eficiente e flexível para a criação de interfaces de usuário (UI)”.'
 ---
 

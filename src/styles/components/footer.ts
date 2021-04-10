@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { AiFillGithub, AiFillInstagram } from 'react-icons/ai'
+import { IoMdRocket } from 'react-icons/io'
+
 import { icon } from '../variables'
 
 export const Container = styled.footer`
@@ -34,4 +36,11 @@ export const Instagram = styled(AiFillInstagram)`
   ${icon};
   margin-left: 2.1rem;
   fill: ${props => props.theme.colors.primary};
+`
+
+export const Rocket = styled(IoMdRocket)`
+  ${icon};
+  margin-left: 2.1rem;
+  fill: ${props => props.theme.colors.primary};
+  transform: rotate(45deg);
 `
