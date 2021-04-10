@@ -19,31 +19,6 @@ export const Container = styled.div`
       ${h1FontStyles}
     }
 
-    > span {
-      display: flex;
-
-      margin: 1rem 0 1.4rem;
-
-      > p {
-        color: #8695a4;
-      }
-      > .tag {
-        width: 3.8rem;
-        height: 1.5rem;
-
-        margin-right: 1.25rem;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background: ${props => props.theme.colors.buttonBackground};
-        color: #fff;
-        border-radius: 1rem;
-        font-weight: 700;
-      }
-    }
-
     > .content {
       > h1 {
         ${h1FontStyles}

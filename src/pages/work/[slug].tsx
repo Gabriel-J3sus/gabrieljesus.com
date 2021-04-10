@@ -10,6 +10,7 @@ import { ProjectPostData } from '../../types/ProjectsPostProps'
 import { Container } from '../../styles/pages/project'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
+import { CardDetailsComponent } from '../../components/SmallerComponents'
 
 const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
   return (
@@ -58,10 +59,11 @@ const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
       <div className="contentWrapper">
         <h1>{ProjectPostData?.title}</h1>
 
-        <span className="typesAndData">
-          <p className="tag">{ProjectPostData?.year}</p>
-          <p>{ProjectPostData?.type}</p>
-        </span>
+        <CardDetailsComponent
+          year={ProjectPostData.year}
+          type={ProjectPostData.type}
+          tagColor="highlighted"
+        />
 
         <div
           className="content"

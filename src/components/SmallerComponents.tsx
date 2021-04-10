@@ -24,7 +24,7 @@ export const CardDetailsComponent: React.FC<CardDetailsProps> = ({
   tagColor
 }) => {
   return (
-    <CardDetailsContainer>
+    <CardDetailsContainer tagColor={tagColor}>
       <p className="tag">{year}</p>
       <p>{type}</p>
     </CardDetailsContainer>

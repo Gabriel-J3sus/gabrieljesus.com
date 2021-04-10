@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface TagProps {
+  tagColor: string
+}
+
 export const Button = styled.button`
   width: 13rem;
   height: 2.9rem;
@@ -24,7 +28,6 @@ export const Button = styled.button`
 
 export const CardDetailsContainer = styled.span`
   display: flex;
-
   margin: 1rem 0 1.5rem;
 
   > p {
@@ -41,10 +44,14 @@ export const CardDetailsContainer = styled.span`
     align-items: center;
     justify-content: center;
 
-    background: ${props => props.theme.colors.tagBackground};
+    background: ${({ tagColor }: TagProps) =>
+      tagColor === 'normal'
+        ? props => props.theme.colors.tagBackground
+        : props => props.theme.colors.buttonBackground};
+
     color: #fff;
     border-radius: 1rem;
-    font-weight: 900;
+    font-weight: 700;
   }
 
   @media (min-width: 530px) {
