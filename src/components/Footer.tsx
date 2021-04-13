@@ -5,7 +5,7 @@ import {
   Container,
   Github,
   Instagram,
-  Rocket
+  Email
 } from '../styles/components/footer'
 
 export const Footer: React.FC = () => {
@@ -27,12 +27,8 @@ export const Footer: React.FC = () => {
           <Instagram />
         </a>
 
-        <a
-          target="_blank"
-          href="https://app.rocketseat.com.br/me/gabriel-jesus-1596360319"
-          rel="noopener noreferrer"
-        >
-          <Rocket />
+        <a href="mailto:gabr.jesus001@gmail.com">
+          <Email />
         </a>
       </div>
 
