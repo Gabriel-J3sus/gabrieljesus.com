@@ -11,7 +11,6 @@ export const Container = styled.div`
   padding-left: 0.25rem;
 
   border-bottom: 1px solid ${props => props.theme.colors.line};
-  box-shadow: 1px -2px 10px ${props => props.theme.colors.shadows};
 
   transition: 0.2s;
   cursor: pointer;

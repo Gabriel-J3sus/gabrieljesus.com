@@ -9,6 +9,7 @@ import { BlogPostData } from '../../types/BlogPostsProps'
 
 import { Header } from '../../components/Header'
 import { BlogPostDetailsComponent } from '../../components/SmallerComponents'
+import { ShareButtons } from '../../components/ShareButtons'
 import { Footer } from '../../components/Footer'
 
 import { Container } from '../../styles/pages/post'
@@ -71,6 +72,13 @@ const Post: React.FC<BlogPostData> = ({ BlogPostData }) => {
         <div
           className="content"
           dangerouslySetInnerHTML={{ __html: BlogPostData?.contentHtml }}
+        />
+
+        <ShareButtons
+          url={`https://gabrjesus.vercel.app/work/${BlogPostData?.slug}`}
+          title={BlogPostData?.title}
+          description={BlogPostData?.description}
+          source={`https://gabrjesus.vercel.app/work/${BlogPostData?.slug}`}
         />
       </div>
 
