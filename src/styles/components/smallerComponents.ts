@@ -17,7 +17,7 @@ export const Button = styled.button`
 
   font-size: 1.25rem;
   font-weight: 500;
-  color: #fff;
+  color: ${props => props.theme.colors.background};
 
   transition: 0.2s;
 
