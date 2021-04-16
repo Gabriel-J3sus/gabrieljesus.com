@@ -13,6 +13,7 @@ declare module 'styled-components' {
       buttonBackground: string
       line: string
       shadows: string
+      codeContainer: string
     }
   }
 }
