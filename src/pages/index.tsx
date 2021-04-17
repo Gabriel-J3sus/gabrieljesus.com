@@ -85,7 +85,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
           </span>
 
           <div className="postsContainer">
-            {/* {allBlogPostsData.length <= 0 ? (
+            {allBlogPostsData.length <= 0 ? (
               <NoPostFound />
             ) : (
               <>
@@ -102,8 +102,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
                   )
                 )}
               </>
-            )} */}
-            <NoPostFound />
+            )}
           </div>
         </div>
       </div>

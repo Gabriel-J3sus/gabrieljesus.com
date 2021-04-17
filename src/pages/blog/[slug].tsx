@@ -27,7 +27,7 @@ const Post: React.FC<BlogPostData> = ({ BlogPostData }) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://gabrjesus.vercel.app/work/${BlogPostData?.slug}`}
+          content={`https://gabrjesus.vercel.app/blog/${BlogPostData?.slug}`}
         />
         <meta property="og:title" content={`${BlogPostData?.title} | Post`} />
         <meta
@@ -43,7 +43,7 @@ const Post: React.FC<BlogPostData> = ({ BlogPostData }) => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://gabrjesus.vercel.app/work/${BlogPostData?.slug}`}
+          content={`https://gabrjesus.vercel.app/blog/${BlogPostData?.slug}`}
         />
         <meta
           property="twitter:title"
@@ -75,10 +75,10 @@ const Post: React.FC<BlogPostData> = ({ BlogPostData }) => {
         />
 
         <ShareButtons
-          url={`https://gabrjesus.vercel.app/work/${BlogPostData?.slug}`}
+          url={`https://gabrjesus.vercel.app/blog/${BlogPostData?.slug}`}
           title={BlogPostData?.title}
           description={BlogPostData?.description}
-          source={`https://gabrjesus.vercel.app/work/${BlogPostData?.slug}`}
+          source={`https://gabrjesus.vercel.app/blog/${BlogPostData?.slug}`}
         />
       </div>
 

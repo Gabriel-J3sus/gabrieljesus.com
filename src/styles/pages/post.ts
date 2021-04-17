@@ -46,6 +46,11 @@ export const Container = styled.div`
         border-top: 2px solid ${props => props.theme.colors.shadows};
       }
 
+      > hr {
+        border: 1px solid ${props => props.theme.colors.shadows};
+        margin-bottom: 1rem;
+      }
+
       > .codeContainer {
         width: 100%;
         padding: 1.2rem 1rem 1.3rem;
@@ -53,33 +58,46 @@ export const Container = styled.div`
         background: ${props => props.theme.colors.codeContainer};
         box-shadow: 0px 4px 10px ${props => props.theme.colors.shadows};
         border-radius: 1.5rem;
+        font-size: 1rem;
+        color: #fff;
 
-        > code {
-          font-size: 1.2rem;
-          color: #fff;
-
+        &,
+        p,
+        span {
           > .comment {
             color: #637777;
           }
           > .blue {
             color: #82aaff;
           }
-        }
-
-        > p {
-          color: #fff;
 
           > .comment {
             color: #637777;
           }
 
-          > .blue {
-            color: #82aaff;
+          > .pink {
+            color: #ff79c6;
           }
-        }
 
-        > .comment {
-          color: #637777;
+          > .yellow {
+            color: #f1fa8c;
+          }
+
+          > .purple {
+            color: #bd93f9;
+          }
+
+          > .bracket-orange {
+            color: Gold;
+          }
+
+          > .bracket-purple {
+            color: Orchid;
+          }
+
+          > .bracket-blue {
+            color: LightSkyBlue;
+          }
         }
       }
 

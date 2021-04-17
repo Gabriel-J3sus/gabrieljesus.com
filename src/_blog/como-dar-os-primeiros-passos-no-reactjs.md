@@ -1,6 +1,6 @@
 ---
   title: 'Primeiros passos com React.js'
-  date: '16-04-2021'
+  date: '17-04-2021'
   formatedDate: '16 Mar 2021'
   type: 'JavaScript library'
   description: 'Como é definido pelo Facebook, React é “uma biblioteca JavaScript declarativa, eficiente e flexível para a criação de interfaces de usuário (UI)”.'
@@ -14,7 +14,7 @@ Foi criado pelo Instagram antes de ser comprado pelo Facebook. React.js está se
 
 <br />
 
-React permite a criação de componentes encapsulados que gerenciam seus próprios estados, e quando se conectam com outros componentes, criam interfaces de usúario (UIs) complexas, com uma sintaxe declarativa e simples facilitando a manutenção do código, formando assim um dos seus maiores benefícios.
+React permite a criação de componentes encapsulados que gerenciam seus próprios estados, e quando se conectam com outros componentes, criam interfaces de usuário (UIs) complexas, com uma sintaxe declarativa e simples facilitando a manutenção do código, formando assim um dos seus maiores benefícios.
 
 <br />
 <br />
@@ -51,11 +51,11 @@ Após a instalação, você pode executar o comando:
 <br />
 
 <div class="codeContainer">
-  <p><span class="blue">npm</span> start</p>
+  <p><span class="blue">npm</span> start<p>
 
   <br />
 
-  <p class="comment"> // Ou </p>
+  <p class="comment">// Ou</p>
 
   <br />
 
@@ -65,7 +65,7 @@ Após a instalação, você pode executar o comando:
 <br />
 <br />
 
-Após isso, acesse no seu navegador o endereço: <a target="_blank" rel="noopener oreferrer" href="http://localhost:3000/">localhost:3000</a>, ao carrega, você verá a página de boas vindas, criada pelo próprio React.js.
+Após isso, acesse no seu navegador o endereço: <a target="_blank" rel="noopener oreferrer" href="http://localhost:3000/">localhost:3000</a>, ao carregar, você verá a página de boas-vindas, criada pelo próprio React.js.
 
 <br />
 <br />
@@ -74,20 +74,20 @@ Após isso, acesse no seu navegador o endereço: <a target="_blank" rel="noopene
 
 <br />
 
-- node_modules: onde estão instaladas todas as dependencias do projeto;
+- node_modules: onde estão instaladas todas as dependências do projeto;
 - public: armazena o arquivo HTML que irá renderizar a página;
-- src: aqui, é aonde você irá programar a sua aplicação;
-  - index.js: arquivo que vai injetar o Javascript dentro do arquivo index.html, para apresentar para o usúario;
+- src: aqui, é onde você irá programar a sua aplicação;
+  - index.js: arquivo que vai injetar o Javascript dentro do arquivo index.html, para apresentar para o usuário;
   - App.js: esse é o arquivo que envia os componentes para o index.js.
 
 - .gitignore: define os arquivos que serão ignorados pelo git;
-- package.json: apresenta detalhes do projeto, como por exemplo: nome, descrição do projeto, versões, dependencias de desenvolvimento e de produção, etc;
+- package.json: apresenta detalhes do projeto, como por exemplo: nome, descrição do projeto, versões, dependências de desenvolvimento e de produção etc;
 - readme.md: arquivo para a descrição detalhada do projeto.
 
 <br />
 <br />
 
-## Linpando o código
+## Limpando o código
 
 <br />
 
@@ -99,7 +99,7 @@ No index.js delete a referência do index.css e do registerServiceWorker.
 
 <br />
 
-No App.js delete a referencia do logo e do app.css e todo o corpo dentro da primeira div.
+No App.js delete a referência do logo e do app.css e todo o corpo dentro da primeira div.
 
 <br />
 
@@ -118,4 +118,25 @@ Dentro do arquivo App.js, adicione o seguinte código, para você dar o seu prim
 
 <div class="codeContainer">
 
+  <span class="pink">``import``</span> ``React`` <span class="pink">``from``</span> <span class="yellow">``'react'``</span>``;``
+
+  <br />
+
+  <span class="pink">``function``</span> <span class="purple">``App``</span> <span class="bracket-orange">``() {``</span>
+  <br />
+    &nbsp;&nbsp;&nbsp; <span class="pink">``return``</span> ``<``<span class="pink">``h1``</span>``>Hello World</``<span class="pink">``h1``</span>``>;``
+  <br />
+  <span class="bracket-orange">``}``</span>
+
+  <br />
+
+  <span class="pink">``export default``</span> <span class="purple">``App``</span>``;``
+
 </div>
+
+<br />
+<br />
+
+<hr />
+
+Muito obrigado por ter lido! Agora você aprendeu o início de como usar React.js. Caso haja alguma outra dúvida, verifique a documentação do <a target="_blank" rel="noopener oreferrer" href="https://reactjs.org/">React.js</a>, ela me ajudou muito a escrever esse poste. Obrigado, e até a próxima!!!
