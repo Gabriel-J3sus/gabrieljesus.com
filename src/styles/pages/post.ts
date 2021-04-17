@@ -31,33 +31,6 @@ export const Container = styled.div`
       > h2 {
         ${h2FontStyles}
       }
-      > .imageContainer {
-        width: 100%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        > img {
-          width: 16.5rem;
-
-          @media (min-width: 440px) {
-            width: 20.5rem;
-          }
-
-          @media (min-width: 550px) {
-            width: 28.5rem;
-          }
-
-          @media (min-width: 760px) {
-            width: 34.5rem;
-          }
-
-          @media (min-width: 850px) {
-            width: 100%;
-          }
-        }
-      }
 
       > p a,
       h3 a {
@@ -68,15 +41,52 @@ export const Container = styled.div`
         }
       }
 
-      > ul li {
-        font-size: 1.2rem;
-
-        margin-left: 2.5rem;
-      }
-
       > h3 {
         padding-top: 0.5rem;
         border-top: 2px solid ${props => props.theme.colors.shadows};
+      }
+
+      > .codeContainer {
+        width: 100%;
+        padding: 1.2rem 1rem 1.3rem;
+
+        background: ${props => props.theme.colors.codeContainer};
+        box-shadow: 0px 4px 10px ${props => props.theme.colors.shadows};
+        border-radius: 1.5rem;
+
+        > code {
+          font-size: 1.2rem;
+          color: #fff;
+
+          > .comment {
+            color: #637777;
+          }
+          > .blue {
+            color: #82aaff;
+          }
+        }
+
+        > p {
+          color: #fff;
+
+          > .comment {
+            color: #637777;
+          }
+
+          > .blue {
+            color: #82aaff;
+          }
+        }
+
+        > .comment {
+          color: #637777;
+        }
+      }
+
+      > ul li {
+        font-size: 1rem;
+
+        margin-left: 2.5rem;
       }
     }
   }
