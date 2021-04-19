@@ -36,7 +36,7 @@ const Post: React.FC<BlogPostData> = ({ BlogPostData }) => {
         />
         <meta
           property="og:image"
-          content="https://gabrjesus.vercel.app/logo-full.svg"
+          content="https://gabrjesus.vercel.app/logo-full400.png"
         />
 
         {/* <!-- Twitter --> */}
@@ -55,7 +55,7 @@ const Post: React.FC<BlogPostData> = ({ BlogPostData }) => {
         />
         <meta
           property="twitter:image"
-          content="https://gabrjesus.vercel.app/logo-full.svg"
+          content="https://gabrjesus.vercel.app/logo-full400.png"
         />
       </Head>
 

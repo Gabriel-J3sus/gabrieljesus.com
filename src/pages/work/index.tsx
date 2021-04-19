@@ -39,7 +39,7 @@ const work: React.FC<ProjectPostsCardData> = ({ allProjectsPostsData }) => {
         />
         <meta
           property="og:image"
-          content="https://gabrjesus.vercel.app/logo-full.svg"
+          content="https://gabrjesus.vercel.app/logo-full400.png"
         />
 
         {/* <!-- Twitter --> */}
@@ -58,7 +58,7 @@ const work: React.FC<ProjectPostsCardData> = ({ allProjectsPostsData }) => {
         />
         <meta
           property="twitter:image"
-          content="https://gabrjesus.vercel.app/logo-full.svg"
+          content="https://gabrjesus.vercel.app/logo-full400.png"
         />
       </Head>
 

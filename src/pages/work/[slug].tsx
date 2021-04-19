@@ -37,7 +37,10 @@ const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
           property="og:description"
           content={`${ProjectPostData?.description}`}
         />
-        <meta property="og:image" content={ProjectPostData?.image} />
+        <meta
+          property="og:image"
+          content="https://gabrjesus.vercel.app/logo-full400.png"
+        />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -53,7 +56,10 @@ const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
           property="twitter:description"
           content={`${ProjectPostData?.description}`}
         />
-        <meta property="twitter:image" content={ProjectPostData?.image} />
+        <meta
+          property="twitter:image"
+          content="https://gabrjesus.vercel.app/logo-full400.png"
+        />
       </Head>
 
       <Header />

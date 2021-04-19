@@ -1,5 +1,6 @@
 /* eslint-disable no-use-before-define */
 import Link from 'next/link'
+import Image from 'next/image'
 import React, { useCallback, useContext, useRef } from 'react'
 import { ThemeContext } from 'styled-components'
 
@@ -49,55 +50,61 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
 
   return (
     <Container>
-      <button type="button" onClick={toggleTheme}>
-        {title === 'dark' ? <SunIcon /> : <MoonIcon />}
-      </button>
+      <Link href="/">
+        <img src="/transparent-logo.png" alt="logo" />
+      </Link>
 
-      <div className="options">
-        <Link href="/work">
-          <p style={work}>Projetos</p>
-        </Link>
+      <div className="settingsContainer">
+        <button type="button" onClick={toggleTheme}>
+          {title === 'dark' ? <SunIcon /> : <MoonIcon />}
+        </button>
 
-        <Link href="/blog">
-          <p style={blog}>Blog</p>
-        </Link>
-
-        <Link href="/">
-          <p style={contact}>Home</p>
-        </Link>
-      </div>
-      <div className="modal">
-        <div className="openAndCloseWrapper">
-          <button
-            type="button"
-            className="menu"
-            onClick={handleOpenOrCloseModal}
-          >
-            <div className="one"></div>
-            <div className="two"></div>
-            <div className="three"></div>
-          </button>
-        </div>
-
-        <nav>
+        <div className="options">
           <Link href="/work">
-            <span onClick={handleOverflow}>
-              <h1 style={work}>Projetos</h1>
-            </span>
+            <p style={work}>Projetos</p>
           </Link>
 
           <Link href="/blog">
-            <span onClick={handleOverflow}>
-              <h1 style={blog}>Blog</h1>
-            </span>
+            <p style={blog}>Blog</p>
           </Link>
 
           <Link href="/">
-            <span onClick={handleOverflow}>
-              <h1 style={contact}>Home</h1>
-            </span>
+            <p style={contact}>Home</p>
           </Link>
-        </nav>
+        </div>
+        <div className="modal">
+          <div className="openAndCloseWrapper">
+            <button
+              type="button"
+              className="menu"
+              onClick={handleOpenOrCloseModal}
+            >
+              <div className="one"></div>
+              <div className="two"></div>
+              <div className="three"></div>
+            </button>
+          </div>
+
+          <nav>
+            <Link href="/work">
+              <span onClick={handleOverflow}>
+                <h1 style={work}>Projetos</h1>
+              </span>
+            </Link>
+
+            <Link href="/blog">
+              <span onClick={handleOverflow}>
+                <h1 style={blog}>Blog</h1>
+              </span>
+            </Link>
+
+            <Link href="/">
+              <span onClick={handleOverflow}>
+                <h1 style={contact}>Home</h1>
+              </span>
+            </Link>
+          </nav>
+        </div>
       </div>
     </Container>
   )

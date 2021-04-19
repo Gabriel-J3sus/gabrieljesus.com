@@ -51,7 +51,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
         />
         <meta
           property="og:image"
-          content="https://gabrjesus.vercel.app/logo-full.svg"
+          content="https://gabrjesus.vercel.app/logo-full400.png"
         />
 
         {/* <!-- Twitter --> */}
@@ -67,7 +67,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
         />
         <meta
           property="twitter:image"
-          content="https://gabrjesus.vercel.app/logo-full.svg"
+          content="https://gabrjesus.vercel.app/logo-full400.png"
         />
       </Head>
 
@@ -89,8 +89,9 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
               <NoPostFound />
             ) : (
               <>
-                {allBlogPostsData.map(
-                  ({ slug, title, formatedDate, type, description }) => (
+                {allBlogPostsData
+                  .slice(0, 2)
+                  .map(({ slug, title, formatedDate, type, description }) => (
                     <Post
                       key={slug}
                       slug={slug}
@@ -99,8 +100,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
                       type={type}
                       description={description}
                     />
-                  )
-                )}
+                  ))}
               </>
             )}
           </div>
