@@ -7,10 +7,8 @@ import { getAllBlogPostsIds, getBlogPostData } from '../api/blogPosts'
 
 import { BlogPostData } from '../../types/BlogPostsProps'
 
-import { Header } from '../../components/Header'
 import { BlogPostDetailsComponent } from '../../components/SmallerComponents'
 import { ShareButtons } from '../../components/ShareButtons'
-import { Footer } from '../../components/Footer'
 
 import { Container } from '../../styles/pages/post'
 
@@ -59,8 +57,6 @@ const Post: React.FC<BlogPostData> = ({ BlogPostData }) => {
         />
       </Head>
 
-      <Header />
-
       <div className="contentWrapper">
         <h1>{BlogPostData?.title}</h1>
 
@@ -75,14 +71,12 @@ const Post: React.FC<BlogPostData> = ({ BlogPostData }) => {
         />
 
         <ShareButtons
-          url={`https://gabrjesus.vercel.app/blog/${BlogPostData?.slug}`}
+          url={`https://gabrjesus.vercel.app/blog/${BlogPostData?.slug}/`}
           title={BlogPostData?.title}
           description={BlogPostData?.description}
-          source={`https://gabrjesus.vercel.app/blog/${BlogPostData?.slug}`}
+          source={`https://gabrjesus.vercel.app/blog/${BlogPostData?.slug}/`}
         />
       </div>
-
-      <Footer />
     </Container>
   )
 }

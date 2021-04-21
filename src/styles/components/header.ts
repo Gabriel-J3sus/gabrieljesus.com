@@ -3,11 +3,6 @@ import { BsMoon, BsSun } from 'react-icons/bs'
 import { h1FontStyles, icon } from '../variables'
 
 export const Container = styled.header`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-
   padding: 1.25rem 1.12rem 0.75rem;
 
   display: flex;
@@ -154,6 +149,7 @@ export const Container = styled.header`
 
           > h1 {
             ${h1FontStyles}
+            color: ${props => props.theme.colors.primary};
           }
         }
         span:not(:first-child) {
@@ -179,6 +175,7 @@ export const Container = styled.header`
         > p {
           font-size: 1.25rem;
           font-weight: 500;
+          color: ${props => props.theme.colors.primary};
 
           margin-left: 2rem;
 

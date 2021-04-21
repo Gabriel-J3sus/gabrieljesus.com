@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { AiFillGithub, AiFillInstagram, AiOutlineMail } from 'react-icons/ai'
-import { IoMdRocket } from 'react-icons/io'
 
 import { icon } from '../variables'
 

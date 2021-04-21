@@ -99,7 +99,7 @@ export const Container = styled.div`
   }
 
   @media (min-width: 850px) {
-    padding-top: 13.36rem;
+    padding-top: 4rem;
 
     > .ContactPostsContainer {
       height: 100%;

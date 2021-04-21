@@ -7,10 +7,8 @@ import { getSortedProjectsPostsData } from '../api/projectsPosts'
 
 import { ProjectPostsCardData } from '../../types/ProjectsPostProps'
 
-import { Header } from '../../components/Header'
 import { PostsContainer } from '../../components/PostsContainer'
 import { Work } from '../../components/WorkComponent'
-import { Footer } from '../../components/Footer'
 
 import { Container } from '../../styles/pages/work'
 
@@ -62,8 +60,6 @@ const work: React.FC<ProjectPostsCardData> = ({ allProjectsPostsData }) => {
         />
       </Head>
 
-      <Header page="work" />
-
       <PostsContainer
         title="Projetos"
         postsLength={allProjectsPostsData.length}
@@ -82,8 +78,6 @@ const work: React.FC<ProjectPostsCardData> = ({ allProjectsPostsData }) => {
           )
         )}
       </PostsContainer>
-
-      <Footer />
     </Container>
   )
 }

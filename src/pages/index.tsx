@@ -11,12 +11,10 @@ import { getSortedProjectsPostsData } from './api/projectsPosts'
 import { ProjectPostsCardData } from '../types/ProjectsPostProps'
 import { BlogPostsCardData } from '../types/BlogPostsProps'
 
-import { Header } from '../components/Header'
 import { CreatorDescription } from '../components/CreatorDescription'
 import { NoPostFound } from '../components/NoPostFound'
 import { Post } from '../components/PostComponent'
 import { Work } from '../components/WorkComponent'
-import { Footer } from '../components/Footer'
 
 import { Container } from '../styles/pages/home'
 
@@ -70,8 +68,6 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
           content="https://gabrjesus.vercel.app/logo-full400.png"
         />
       </Head>
-
-      <Header page="home" />
 
       <CreatorDescription />
 
@@ -137,7 +133,6 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
           )}
         </div>
       </div>
-      <Footer />
     </Container>
   )
 }

@@ -7,8 +7,6 @@ import { getAllProjectsPostIds, getProjectPostData } from '../api/projectsPosts'
 
 import { ProjectPostData } from '../../types/ProjectsPostProps'
 
-import { Header } from '../../components/Header'
-import { Footer } from '../../components/Footer'
 import { CardDetailsComponent } from '../../components/SmallerComponents'
 import { ShareButtons } from '../../components/ShareButtons'
 
@@ -62,8 +60,6 @@ const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
         />
       </Head>
 
-      <Header />
-
       <div className="contentWrapper">
         <h1>{ProjectPostData?.title}</h1>
 
@@ -79,14 +75,12 @@ const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
         />
 
         <ShareButtons
-          url={`https://gabrjesus.vercel.app/work/${ProjectPostData?.slug}`}
+          url={`https://gabrjesus.vercel.app/work/${ProjectPostData?.slug}/`}
           title={ProjectPostData?.title}
           description={ProjectPostData?.description}
-          source={`https://gabrjesus.vercel.app/work/${ProjectPostData?.slug}`}
+          source={`https://gabrjesus.vercel.app/work/${ProjectPostData?.slug}/`}
         />
       </div>
-
-      <Footer />
     </Container>
   )
 }

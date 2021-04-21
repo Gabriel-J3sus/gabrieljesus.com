@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 export const pagesStyles = css`
   width: 100vw;
 
-  padding-top: 6.5rem;
+  padding-top: 2rem;
 
   display: flex;
   flex-direction: column;

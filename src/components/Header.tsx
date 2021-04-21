@@ -1,33 +1,22 @@
 /* eslint-disable no-use-before-define */
-import Link from 'next/link'
-import Image from 'next/image'
 import React, { useCallback, useContext, useRef } from 'react'
+import Link from 'next/link'
 import { ThemeContext } from 'styled-components'
+import { useRouter } from 'next/router'
 
 import { MyThemeContext } from '../contexts/themeContext'
-import { PageLocation } from '../types/components/HeaderProps'
 
 import { Container, MoonIcon, SunIcon } from '../styles/components/header'
 
-export const Header: React.FC<PageLocation> = ({ page }) => {
+export const Header: React.FC = () => {
+  const router = useRouter()
   const { toggleTheme } = useContext(MyThemeContext)
   const { title, colors } = useContext(ThemeContext)
   const isModalOpen = useRef({ value: false })
 
-  const blog =
-    page === 'blog'
-      ? { color: `${colors.buttonBackground}` }
-      : { color: `${colors.primary}` }
-
-  const contact =
-    page === 'home'
-      ? { color: `${colors.buttonBackground}` }
-      : { color: `${colors.primary}` }
-
-  const work =
-    page === 'work'
-      ? { color: `${colors.buttonBackground}` }
-      : { color: `${colors.primary}` }
+  const home = router.pathname === '/' && colors.buttonBackground
+  const blog = router.pathname === '/blog' && colors.buttonBackground
+  const work = router.pathname === '/work' && colors.buttonBackground
 
   const handleOpenOrCloseModal = useCallback(() => {
     isModalOpen.current.value = !isModalOpen.current.value
@@ -61,15 +50,15 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
 
         <div className="options">
           <Link href="/work">
-            <p style={work}>Projetos</p>
+            <p style={{ color: work }}>Projetos</p>
           </Link>
 
           <Link href="/blog">
-            <p style={blog}>Blog</p>
+            <p style={{ color: blog }}>Blog</p>
           </Link>
 
           <Link href="/">
-            <p style={contact}>Home</p>
+            <p style={{ color: home }}>Home</p>
           </Link>
         </div>
         <div className="modal">
@@ -88,19 +77,19 @@ export const Header: React.FC<PageLocation> = ({ page }) => {
           <nav>
             <Link href="/work">
               <span onClick={handleOverflow}>
-                <h1 style={work}>Projetos</h1>
+                <h1 style={{ color: work }}>Projetos</h1>
               </span>
             </Link>
 
             <Link href="/blog">
               <span onClick={handleOverflow}>
-                <h1 style={blog}>Blog</h1>
+                <h1 style={{ color: blog }}>Blog</h1>
               </span>
             </Link>
 
             <Link href="/">
               <span onClick={handleOverflow}>
-                <h1 style={contact}>Home</h1>
+                <h1 style={{ color: home }}>Home</h1>
               </span>
             </Link>
           </nav>

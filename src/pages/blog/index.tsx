@@ -7,10 +7,8 @@ import { getSortedBlogPostsData } from '../api/blogPosts'
 
 import { BlogPostsCardData } from '../../types/BlogPostsProps'
 
-import { Header } from '../../components/Header'
 import { PostsContainer } from '../../components/PostsContainer'
 import { Post } from '../../components/PostComponent'
-import { Footer } from '../../components/Footer'
 
 import { Container } from '../../styles/pages/blog'
 
@@ -59,8 +57,6 @@ const blog: React.FC<BlogPostsCardData> = ({ allBlogPostsData }) => {
         />
       </Head>
 
-      <Header page="blog" />
-
       <PostsContainer title="Blog" postsLength={allBlogPostsData.length}>
         {allBlogPostsData.map(
           ({ slug, title, formatedDate, type, description }) => (
@@ -75,8 +71,6 @@ const blog: React.FC<BlogPostsCardData> = ({ allBlogPostsData }) => {
           )
         )}
       </PostsContainer>
-
-      <Footer />
     </Container>
   )
 }
