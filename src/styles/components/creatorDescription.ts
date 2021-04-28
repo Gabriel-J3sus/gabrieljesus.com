@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { h1FontStyles } from '../variables'
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;

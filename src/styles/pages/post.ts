@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { h1FontStyles, h2FontStyles, pagesStyles } from '../variables'
 
-export const Container = styled.div`
+export const Container = styled.section`
   ${pagesStyles};
 
   > .contentWrapper {

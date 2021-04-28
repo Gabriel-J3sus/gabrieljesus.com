@@ -10,7 +10,7 @@ export const CreatorDescription: React.FC = () => {
 
   return (
     <Container>
-      <div className="avatarAndTec">
+      <article className="avatarAndTec">
         <img
           src="https://github.com/Gabriel-J3sus.png"
           alt="Gabriel Araújo de Jesus"
@@ -73,9 +73,9 @@ export const CreatorDescription: React.FC = () => {
             <img src="icons/visual-studio-code-1.svg" alt="VSCode" />
           </a>
         </span>
-      </div>
+      </article>
 
-      <div className="description">
+      <main className="description">
         <h1>Olá, eu sou o Gabriel, um desenvolvedor de softwares.</h1>
         <p>
           Bem-vindo ao meu blog. Aqui, eu compartilho alguns fatos interessantes
@@ -87,7 +87,7 @@ export const CreatorDescription: React.FC = () => {
           HandleButtonOnClickFunctions={handleCVDownload}
           title="Baixar currículo"
         /> */}
-      </div>
+      </main>
     </Container>
   )
 }
