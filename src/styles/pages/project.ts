@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { pagesStyles, h1FontStyles, h2FontStyles } from '../variables'
+import { motion } from 'framer-motion'
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   ${pagesStyles}
 
   > .contentWrapper {

@@ -1,7 +1,55 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
+import { motion } from 'framer-motion'
 
 import { Container } from '../styles/components/creatorDescription'
+
+// ----- Framer Motion Variants -----
+
+const mainVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+
+    transition: {
+      staggerChildren: 0.4
+    }
+  }
+}
+
+const textVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1
+  }
+}
+
+const containerVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3
+    }
+  }
+}
+
+const imageVariant = {
+  hidden: {
+    opacity: 0,
+    y: 25
+  },
+  visible: {
+    opacity: 1,
+    y: 0
+  }
+}
 
 export const CreatorDescription: React.FC = () => {
   // function handleCVDownload() {
@@ -15,79 +63,89 @@ export const CreatorDescription: React.FC = () => {
           src="https://github.com/Gabriel-J3sus.png"
           alt="Gabriel Araújo de Jesus"
         />
-        <span>
-          <a
+        <motion.span variants={containerVariant}>
+          <motion.a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.javascript.com/"
+            variants={imageVariant}
           >
             <img src="icons/logo-javascript.svg" alt="Javascript" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             target="_blank"
             rel="noopener noreferrer"
             href="https://nodejs.org/en/"
+            variants={imageVariant}
           >
             <img src="icons/nodejs-icon.svg" alt="NodeJs" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.typescriptlang.org/"
+            variants={imageVariant}
           >
             <img src="icons/typescript.svg" alt="Typescript" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             target="_blank"
             rel="noopener noreferrer"
             href="https://reactjs.org/"
+            variants={imageVariant}
           >
             <img src="icons/react-2.svg" alt="ReactJs" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.mongodb.com/"
+            variants={imageVariant}
           >
             <img src="icons/mongodb-icon-1.svg" alt="Mongodb" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.postgresql.org/"
+            variants={imageVariant}
           >
             <img src="icons/postgresql.svg" alt="PostgreSQL" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.w3schools.com/css/"
+            variants={imageVariant}
           >
             <img src="icons/css-5.svg" alt="css3" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             target="_blank"
             rel="noopener noreferrer"
             href="https://code.visualstudio.com/"
+            variants={imageVariant}
           >
             <img src="icons/visual-studio-code-1.svg" alt="VSCode" />
-          </a>
-        </span>
+          </motion.a>
+        </motion.span>
       </article>
 
-      <main className="description">
-        <h1>Olá, eu sou o Gabriel, um desenvolvedor de softwares.</h1>
-        <p>
+      <motion.main className="description" variants={mainVariant}>
+        <motion.h1 variants={textVariant}>
+          Olá, eu sou o Gabriel, um desenvolvedor de softwares.
+        </motion.h1>
+        <motion.p variants={textVariant}>
           Bem-vindo ao meu blog. Aqui, eu compartilho alguns fatos interessantes
           do mundo da programação, e mostro os meus projetos mais importantes,
           com o objetivo de expor o meu crescimento como desenvolvedor.
-        </p>
+        </motion.p>
 
         {/* <ButtonComponent
           HandleButtonOnClickFunctions={handleCVDownload}
           title="Baixar currículo"
         /> */}
-      </main>
+      </motion.main>
     </Container>
   )
 }

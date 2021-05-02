@@ -12,9 +12,40 @@ import { ShareButtons } from '../../components/ShareButtons'
 
 import { Container } from '../../styles/pages/project'
 
+// ----- Framer Motion Variants -----
+
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+    x: '100vw'
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 1,
+      duration: 1,
+      type: 'spring',
+      when: 'beforeChildren'
+    }
+  },
+  exit: {
+    opacity: 0,
+    x: '-100vw',
+    transition: {
+      ease: 'easeInOut'
+    }
+  }
+}
+
 const Project: React.FC<ProjectPostData> = ({ ProjectPostData }) => {
   return (
-    <Container>
+    <Container
+      variants={containerVariant}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <Head>
         {/* <!-- Primary Meta Tags --> */}
         <title>{ProjectPostData?.title} | Projeto</title>

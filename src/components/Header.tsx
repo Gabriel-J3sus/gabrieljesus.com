@@ -3,10 +3,36 @@ import React, { useCallback, useContext, useRef } from 'react'
 import Link from 'next/link'
 import { ThemeContext } from 'styled-components'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
 import { MyThemeContext } from '../contexts/themeContext'
 
 import { Container, MoonIcon, SunIcon } from '../styles/components/header'
+
+/* ---- Framer motion variants ----- */
+
+const navigationContainerVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+}
+
+const navigationOptionVariant = {
+  hidden: {
+    opacity: 0,
+    y: 20
+  },
+  visible: {
+    opacity: 1,
+    y: 0
+  }
+}
 
 export const Header: React.FC = () => {
   const router = useRouter()
@@ -38,40 +64,69 @@ export const Header: React.FC = () => {
   }, [])
 
   return (
-    <Container>
+    <Container
+      variants={navigationContainerVariant}
+      initial="hidden"
+      animate="visible"
+    >
       <Link href="/">
-        <img src="/transparent-logo.png" alt="logo" />
+        <motion.img
+          src="/transparent-logo.png"
+          alt="logo"
+          initial={{ opacity: 0, rotate: -360 }}
+          animate={{ opacity: 1, rotate: 0, transition: { duration: 1 } }}
+        />
       </Link>
 
       <div className="settingsContainer">
-        <button type="button" onClick={toggleTheme}>
+        <motion.button
+          type="button"
+          onClick={toggleTheme}
+          variants={navigationOptionVariant}
+        >
           {title === 'dark' ? <SunIcon /> : <MoonIcon />}
-        </button>
+        </motion.button>
 
         <div className="options">
           <Link href="/work">
-            <p style={{ color: work }}>Projetos</p>
+            <motion.p
+              style={{ color: work }}
+              variants={navigationOptionVariant}
+            >
+              Projetos
+            </motion.p>
           </Link>
 
           <Link href="/blog">
-            <p style={{ color: blog }}>Blog</p>
+            <motion.p
+              style={{ color: blog }}
+              variants={navigationOptionVariant}
+            >
+              Blog
+            </motion.p>
           </Link>
 
           <Link href="/">
-            <p style={{ color: home }}>Home</p>
+            <motion.p
+              style={{ color: home }}
+              variants={navigationOptionVariant}
+            >
+              Home
+            </motion.p>
           </Link>
         </div>
         <div className="modal">
           <div className="openAndCloseWrapper">
-            <button
+            <motion.button
               type="button"
               className="menu"
               onClick={handleOpenOrCloseModal}
+              variants={navigationOptionVariant}
             >
               <div className="one"></div>
               <div className="two"></div>
               <div className="three"></div>
-            </button>
+            </motion.button>
           </div>
 
           <nav>

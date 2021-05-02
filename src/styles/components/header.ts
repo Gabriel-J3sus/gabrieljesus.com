@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import { BsMoon, BsSun } from 'react-icons/bs'
 import { h1FontStyles, icon } from '../variables'
+import { motion } from 'framer-motion'
 
-export const Container = styled.header`
+export const Container = styled(motion.header)`
   padding: 1.25rem 1.12rem 0.75rem;
 
   display: flex;
@@ -103,7 +104,7 @@ export const Container = styled.header`
 
           margin-right: 0.5rem;
 
-          transition: 0.2s;
+          transition: opacity 0.2s;
 
           > .one {
             transform: rotate(45deg) translate(6px, 6px);

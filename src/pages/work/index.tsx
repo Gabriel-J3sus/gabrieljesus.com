@@ -12,9 +12,40 @@ import { Work } from '../../components/WorkComponent'
 
 import { Container } from '../../styles/pages/work'
 
+// ----- Framer Motion Variants -----
+
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+    x: '100vw'
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 1,
+      duration: 0.8,
+      type: 'spring',
+      when: 'beforeChildren'
+    }
+  },
+  exit: {
+    opacity: 0,
+    x: '-100vw',
+    transition: {
+      ease: 'easeInOut'
+    }
+  }
+}
+
 const work: React.FC<ProjectPostsCardData> = ({ allProjectsPostsData }) => {
   return (
-    <Container>
+    <Container
+      variants={containerVariant}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <Head>
         {/* <!-- Primary Meta Tags --> */}
         <title>Projetos | Gabriel Araújo de Jesus</title>

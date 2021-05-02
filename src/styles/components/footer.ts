@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { AiFillGithub, AiFillInstagram, AiOutlineMail } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 
 import { icon } from '../variables'
 
-export const Container = styled.footer`
+export const Container = styled(motion.footer)`
   width: 100%;
   height: 11.3rem;
 

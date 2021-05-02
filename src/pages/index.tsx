@@ -4,6 +4,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
+import { motion } from 'framer-motion'
 
 import { getSortedBlogPostsData } from './api/blogPosts'
 import { getSortedProjectsPostsData } from './api/projectsPosts'
@@ -18,12 +19,42 @@ import { Work } from '../components/WorkComponent'
 
 import { Container } from '../styles/pages/home'
 
+// ----- Framer Motion Variants -----
+
+const containerVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: 1,
+      duration: 1,
+      type: 'spring',
+      when: 'beforeChildren'
+    }
+  },
+  exit: {
+    opacity: 0,
+    x: '-100vw',
+    transition: {
+      ease: 'easeInOut'
+    }
+  }
+}
+
 const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
   allBlogPostsData,
   allProjectsPostsData
 }) => {
   return (
-    <Container>
+    <Container
+      variants={containerVariant}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <Head>
         {/* <!-- Primary Meta Tags --> */}
         <title>Home | Gabriel Araújo de Jesus</title>
