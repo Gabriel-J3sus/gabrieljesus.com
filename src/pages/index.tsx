@@ -4,7 +4,6 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
-import { motion } from 'framer-motion'
 
 import { getSortedBlogPostsData } from './api/blogPosts'
 import { getSortedProjectsPostsData } from './api/projectsPosts'
