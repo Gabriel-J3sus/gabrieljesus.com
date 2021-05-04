@@ -30,7 +30,7 @@ const containerVariant = {
     opacity: 1,
     transition: {
       delay: 1,
-      duration: 1,
+      duration: 0.75,
       type: 'spring',
       when: 'beforeChildren'
     }
