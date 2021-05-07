@@ -25,7 +25,6 @@ const containerVariant = {
     opacity: 0
   },
   visible: {
-    x: 0,
     opacity: 1,
     transition: {
       delay: 1,
@@ -36,7 +35,6 @@ const containerVariant = {
   },
   exit: {
     opacity: 0,
-    x: '-100vw',
     transition: {
       ease: 'easeInOut'
     }

@@ -16,22 +16,19 @@ import { Container } from '../../styles/pages/work'
 
 const containerVariant = {
   hidden: {
-    opacity: 0,
-    x: '100vw'
+    opacity: 0
   },
   visible: {
     opacity: 1,
-    x: 0,
     transition: {
       delay: 1,
-      duration: 0.8,
+      duration: 0.75,
       type: 'spring',
       when: 'beforeChildren'
     }
   },
   exit: {
     opacity: 0,
-    x: '-100vw',
     transition: {
       ease: 'easeInOut'
     }
