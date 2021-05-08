@@ -35,11 +35,6 @@ export const Container = styled.article`
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
-
-    transform: translateY(35px);
-    opacity: 0;
-
-    animation: up 1s forwards;
   }
 
   @keyframes up {

@@ -8,40 +8,9 @@ import {
   Email
 } from '../styles/components/footer'
 
-// ----- Framer Motion Variants -----
-
-const componentVariant = {
-  hidden: {
-    opacity: 0,
-    x: '100vw'
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: 1,
-      duration: 0.8,
-      type: 'spring',
-      when: 'beforeChildren'
-    }
-  },
-  exit: {
-    opacity: 0,
-    x: '-100vw',
-    transition: {
-      ease: 'easeInOut'
-    }
-  }
-}
-
 export const Footer: React.FC = () => {
   return (
-    <Container
-      variants={componentVariant}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
+    <Container>
       <div className="iconContainer">
         <a
           target="_blank"
