@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import React, { createContext, useCallback, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 

@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-use-before-define */
 import React from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'

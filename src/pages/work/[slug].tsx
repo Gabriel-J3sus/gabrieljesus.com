@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
@@ -21,8 +20,8 @@ const containerVariant = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 1,
-      duration: 0.75,
+      delay: 0.5,
+      duration: 0.6,
       type: 'spring',
       when: 'beforeChildren'
     }

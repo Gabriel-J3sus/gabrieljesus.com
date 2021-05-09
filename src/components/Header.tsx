@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import React, { useCallback, useContext, useRef } from 'react'
 import Link from 'next/link'
 import { ThemeContext } from 'styled-components'

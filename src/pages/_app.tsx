@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import React from 'react'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'

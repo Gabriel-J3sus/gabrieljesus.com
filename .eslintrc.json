@@ -25,6 +25,11 @@
     "rules": {
       "prettier/prettier": "error",
       "space-before-function-paren": "off",
-      "react/prop-types": "off"
+      "react/prop-types": "off",
+
+      "no-use-before-define": 0,
+      "no-unused-expressions": 0,
+      "multiline-ternary": 0,
+      "@typescript-eslint/no-unused-vars": 0
     }
 }

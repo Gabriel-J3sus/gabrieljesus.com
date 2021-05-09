@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import React from 'react'
 import Link from 'next/link'
 
@@ -19,11 +18,7 @@ export const Work: React.FC<ProjectDataProps> = ({
   return (
     <Link href={`/work/${slug}`}>
       <Container>
-        <img
-          // src={theme.title === 'dark' ? darkImage : lightImage}
-          src={image}
-          alt={title}
-        />
+        <img src={image} alt={title} />
 
         <div className="description">
           <h2>{title}</h2>
