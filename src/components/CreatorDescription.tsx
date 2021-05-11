@@ -58,10 +58,7 @@ export const CreatorDescription: React.FC = () => {
   return (
     <Container>
       <article className="avatarAndTec">
-        <img
-          src="https://github.com/Gabriel-J3sus.png"
-          alt="Gabriel Araújo de Jesus"
-        />
+        <img src="Me.jpg" alt="Gabriel Araújo de Jesus" />
         <motion.span variants={containerVariant}>
           <motion.a
             target="_blank"
