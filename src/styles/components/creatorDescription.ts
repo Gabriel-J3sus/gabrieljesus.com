@@ -98,6 +98,11 @@ export const Container = styled.section`
           img {
             width: 1.7rem;
             height: 1.7rem;
+            transition: 0.2s;
+
+            &:hover {
+              transform: translateY(-8px);
+            }
           }
         }
       }

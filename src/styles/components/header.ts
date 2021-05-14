@@ -12,6 +12,10 @@ export const Container = styled(motion.header)`
 
   background: ${props => props.theme.colors.background};
 
+  > img {
+    cursor: pointer;
+  }
+
   > .settingsContainer {
     display: flex;
     align-items: center;

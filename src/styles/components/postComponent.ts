@@ -12,6 +12,7 @@ export const Container = styled.div`
   box-shadow: 0px 4px 10px ${props => props.theme.colors.shadows};
   border-radius: 4px;
   transition: 0.2s;
+  cursor: pointer;
 
   > h2 {
     ${h2FontStyles}
