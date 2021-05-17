@@ -30,10 +30,11 @@ This was my first big project, done entirely by me, where I managed to prove to 
 - [x] React.js
 - [x] Next.js
 - [x] Styled-Components
+- [x] React-icons
 - [x] Framer-Motion
 - [x] Remark e Remark-html
 - [x] Gray-matter
-- [x] Husky
+- [x] Husky, Commitlint
 - [x] Eslint, Prettier, EditorConfig
 
 ## 🗺 Usage
