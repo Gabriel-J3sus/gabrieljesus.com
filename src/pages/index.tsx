@@ -100,7 +100,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
       <div className="ContactPostsContainer">
         <div className="wrapper">
           <span>
-            <h3>Posts Recentes</h3>
+            <h2>Posts Recentes</h2>
             <Link href="blog">
               <p>Ver tudo</p>
             </Link>
@@ -131,7 +131,7 @@ const Contact: React.FC<BlogPostsCardData & ProjectPostsCardData> = ({
 
       <div className="ContactWorkContainer">
         <span>
-          <h3>Projetos</h3>
+          <h2>Projetos</h2>
           <Link href="work">
             <p>Ver tudo</p>
           </Link>

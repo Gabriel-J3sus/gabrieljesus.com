@@ -15,6 +15,7 @@ export const Footer: React.FC = () => {
           target="_blank"
           href="https://github.com/Gabriel-J3sus"
           rel="noopener noreferrer"
+          aria-label="Gabriel's github"
         >
           <Github />
         </a>
@@ -22,11 +23,12 @@ export const Footer: React.FC = () => {
           target="_blank"
           href="https://www.instagram.com/gabs.j3sus/"
           rel="noopener noreferrer"
+          aria-label="Gabriel's instagram"
         >
           <Instagram />
         </a>
 
-        <a href="mailto:gabr.jesus001@gmail.com">
+        <a href="mailto:gabr.jesus001@gmail.com" aria-label="Gabriel's email">
           <Email />
         </a>
       </div>

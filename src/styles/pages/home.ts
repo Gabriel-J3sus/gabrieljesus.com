@@ -32,7 +32,7 @@ export const Container = styled(motion.section)`
 
         margin-bottom: 2.5rem;
 
-        > h3 {
+        > h2 {
           ${h3FontStyles}
         }
 
@@ -73,7 +73,7 @@ export const Container = styled(motion.section)`
 
       margin-bottom: 2.5rem;
 
-      > h3 {
+      > h2 {
         ${h3FontStyles}
       }
 

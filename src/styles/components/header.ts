@@ -13,6 +13,8 @@ export const Container = styled(motion.header)`
   background: ${props => props.theme.colors.background};
 
   > img {
+    width: 2.625rem;
+    height: 2.25rem;
     cursor: pointer;
   }
 

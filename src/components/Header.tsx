@@ -82,6 +82,7 @@ export const Header: React.FC = () => {
           type="button"
           onClick={toggleTheme}
           variants={navigationOptionVariant}
+          aria-label={`Switch to ${title === 'light' ? 'light' : 'dark'} mode`}
         >
           {title === 'dark' ? <SunIcon /> : <MoonIcon />}
         </motion.button>
