@@ -42,14 +42,19 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
+          <link
+            rel="preload"
+            as="font"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap"
+          />
 
           <link rel="shortcut icon" href="logo.png" type="image/png" />
-
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap"
-            rel="stylesheet"
-          />
         </Head>
 
         <body>

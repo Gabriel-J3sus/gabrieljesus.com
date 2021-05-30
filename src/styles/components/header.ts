@@ -12,12 +12,6 @@ export const Container = styled(motion.header)`
 
   background: ${props => props.theme.colors.background};
 
-  > img {
-    width: 2.625rem;
-    height: 2.25rem;
-    cursor: pointer;
-  }
-
   > .settingsContainer {
     display: flex;
     align-items: center;
@@ -151,6 +145,7 @@ export const Container = styled(motion.header)`
 
           border: 2px solid transparent;
           border-radius: 1rem;
+          cursor: pointer;
 
           transition: all 0.2s;
 

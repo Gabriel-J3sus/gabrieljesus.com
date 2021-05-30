@@ -1,5 +1,6 @@
 import React, { useCallback, useContext, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ThemeContext } from 'styled-components'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
@@ -69,11 +70,12 @@ export const Header: React.FC = () => {
       animate="visible"
     >
       <Link href="/">
-        <motion.img
+        <Image
           src="/transparent-logo.png"
           alt="logo"
-          initial={{ opacity: 0, rotate: -360 }}
-          animate={{ opacity: 1, rotate: 0, transition: { duration: 1 } }}
+          width={42}
+          height={36}
+          quality={75}
         />
       </Link>
 
@@ -122,6 +124,11 @@ export const Header: React.FC = () => {
               className="menu"
               onClick={handleOpenOrCloseModal}
               variants={navigationOptionVariant}
+              aria-label={
+                isModalOpen.current.value
+                  ? 'Click to close modal'
+                  : 'Click to open modal'
+              }
             >
               <div className="one"></div>
               <div className="two"></div>
