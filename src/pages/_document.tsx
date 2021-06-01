@@ -43,8 +43,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <link
-            rel="preload"
-            as="font"
+            rel="preconnect"
             href="https://fonts.gstatic.com"
             crossOrigin="anonymous"
           />
